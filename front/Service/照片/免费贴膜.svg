@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>免费贴膜</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="44" height="44"></rect>
+    </defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC服务1920" transform="translate(-1138.000000, -1480.000000)">
+            <g id="免费贴膜" transform="translate(1138.000000, 1480.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="矩形备份-23"></g>
+                <g id="编组-23" mask="url(#mask-2)" stroke="#575C66" stroke-width="2">
+                    <g transform="translate(11.000000, 12.000000)">
+                        <rect id="矩形" x="0" y="0" width="22" height="26" rx="1"></rect>
+                        <polygon id="路径-4" stroke-linejoin="round" points="12 26 12 16 22 16"></polygon>
+                    </g>
+                </g>
+                <rect id="矩形备份-23" mask="url(#mask-2)" x="0" y="0" width="44" height="44"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

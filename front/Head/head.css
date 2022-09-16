@@ -1,0 +1,409 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('iconfont.ttf?t=1662557626358') format('truetype');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.header {
+    width: 100%;
+    height: 126px;
+    /* background-color: #415fff; */
+}
+
+/* 顶部导航栏 */
+.header .topbar {
+    width: 100%;
+    height: 40px;
+    background: #242933;
+}
+
+.header .topbar .topbar-nav {
+    display: inline-block;
+    line-height: 40px;
+}
+
+.header .topbar ul {
+    padding-left: 80px;
+    margin: 0;
+}
+
+.header .topbar ul li {
+    display: inline-block;
+    padding-right: 42px;
+}
+
+.header .topbar ul li a,
+.header .topbar-user .user-login-box span {
+    font-size: 12px;
+    color: #8a8f99;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* 悬浮字体变白 */
+.header .topbar .topbar-nav ul li>a:hover,
+.header .topbar .topbar-user .dowload:hover,
+.header .topbar .topbar-user .cart:hover,
+.header .topbar-user .user-login-box span:hover {
+    color: #fff;
+}
+
+.header .topbar .topbar-user {
+    display: inline-block;
+    float: right;
+    position: relative;
+    right: 0;
+    padding-right: 80px;
+    width: 240px;
+    height: 40px;
+}
+
+.header .topbar .topbar-user a {
+    font-size: 12px;
+    color: #8a8f99;
+    font-weight: 400;
+    line-height: 40px;
+    margin-right: 26px;
+    width: 74px;
+    height: 40px;
+}
+
+/* 文字图标样式 */
+.header .icon {
+    font-size: large;
+    vertical-align: middle;
+}
+
+.header .topbar .topbar-user .APP .app-qrcode {
+    width: 172px;
+    height: 200px;
+    background-color: #fff;
+    display: none;
+    position: absolute;
+    border-radius: 10px;
+    z-index: 999;
+
+}
+
+.header .topbar .topbar-user .APP:hover .app-qrcode {
+    display: block;
+    transform: translateX(-25%);
+}
+
+.header .topbar .topbar-user .APP .app-qrcode img {
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 16px;
+    padding-left: 17px;
+    width: 140px;
+    height: 140px;
+    text-align: center;
+    cursor: default;
+}
+
+.header .topbar .topbar-user .APP .app-qrcode span {
+    display: block;
+    text-align: center;
+}
+
+.header .topbar .topbar-user .user-login-box {
+    display: inline-block;
+    position: relative;
+}
+
+.header .topbar .topbar-user .user-login-box .user-list a,
+.header .topbar .topbar-user .user-login-box .user-list2 a {
+    display: block;
+    /* background-color:red; */
+    margin: auto;
+}
+
+.header .topbar .topbar-user .user-login-box .user-list a:hover,
+.header .topbar .topbar-user .user-login-box .user-list2 a:hover,
+.header .topbar .topbar-user .user-login-box .user-list a:hover span,
+.header .topbar .topbar-user .user-login-box .user-list2 a:hover span {
+    color: #415fff;
+    transition: all .4s;
+}
+
+.header .topbar .topbar-user .user-login-box .user-list,
+.header .topbar .topbar-user .user-login-box .user-list2 {
+    width: 172px;
+    height: auto;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    transform: translateX(-25%);
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 12px;
+    z-index: 1;
+}
+
+.header .topbar .topbar-user .user-login-box:hover .user-list {
+    /* display: block; */
+}
+
+.header .topbar .topbar-user .user-login-box:hover .user-list2 {
+    display: block;
+}
+
+.header .topbar .topbar-user .user-login-box .user-list .icon,
+.header .topbar .topbar-user .user-login-box .user-list2 .icon {
+    font-size: 14px;
+    vertical-align: auto;
+    margin-right: 4px;
+}
+
+/* 子导航栏 */
+.header .subnar {
+    width: 100%;
+    height: 86px;
+    /* background-color: #5d2ea9; */
+    position: relative;
+    /* z-index: 100; */
+}
+
+.header .subnar .site-wrap {
+    width: 1140px;
+    height: 86px;
+    /* background-color: rgb(160, 102, 102); */
+    margin: auto;
+}
+
+.header .subnar .site-wrap .head-logo {
+    font-size: 120px;
+    display: inline-block;
+    float: left;
+    height: 33px;
+    line-height: 33px;
+    margin-top: 26px;
+}
+
+.header .subnar .site-wrap .site-navs {
+    display: inline-block;
+    width: 900px;
+    height: 86px;
+}
+
+.header .subnar .site-wrap .site-navs>ul {
+    display: inline-block;
+    margin: 0;
+}
+
+.header .subnar .site-wrap .site-navs>ul {
+    height: 86px;
+    /* display: inline-block; */
+    vertical-align: top;
+    text-align: center;
+    cursor: pointer;
+    /* line-height: 86px; */
+    color: #242933;
+    font-size: 14px;
+    font-weight: 540;
+    padding: 0 21px;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.header .subnar .site-wrap .site-search {
+    width: 28px;
+    height: 28px;
+    float: right;
+    font-size: 28px;
+    line-height: 86px;
+    padding-right: 20px;
+}
+
+.header .subnar .site-wrap .site-navs>ul>li:hover>span {
+    color: #415fff;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.header .subnar .site-wrap .head-logo:hover,
+.header .subnar .site-wrap .site-search:hover,
+.header .subnar .category .more .more-main>span:hover,
+.header .subnar .category .more .more-left:hover,
+.header .subnar .category .more .more-right:hover {
+    color: #415fff;
+    cursor: pointer;
+    transition: all .4s;
+}
+
+.header .subnar .category {
+    width: 100%;
+    height: 333px;
+    position: absolute;
+    top: 73px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    left: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    z-index: 99;
+    background-color: #fff;
+}
+
+.header .subnar .category ul {
+    width: 1540px;
+    height: 220px;
+    position: relative;
+}
+
+.header .subnar .category .maxbox {
+    width: 1140px;
+    height: 220px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.header .subnar .category li {
+    display: inline-block;
+    width: 173px;
+    height: 220px;
+    border-radius: 22px;
+    margin-right: 15px;
+    background-color: rgb(247, 248, 250);
+    position: relative;
+
+}
+
+
+.header .subnar .category .img {
+    position: absolute;
+    top: 10px;
+}
+
+.header .subnar .category .img-center {
+    width: 140px;
+    height: 140px;
+    position: absolute;
+    left: 20px;
+}
+
+.header .subnar .category .img-4,
+.header .subnar .category .img-3,
+.header .subnar .category .img-2,
+.header .subnar .category .img-1 {
+    position: absolute;
+    left: 45px;
+    transition: all 0.5s linear;
+}
+
+.header .subnar .category .img-1 {
+    position: absolute;
+    left: 75px;
+    transition: all 0.5s linear;
+}
+
+.header .subnar .category li:hover .img-4 {
+    left: 15px;
+    transition: all 0.5s linear;
+}
+
+.header .subnar .category li:hover .img-2 {
+    left: 75px;
+    transition-duration: 0.5s;
+}
+
+.header .subnar .category li:hover .img-1 {
+    left: 105px;
+    transition-duration: 0.5s;
+}
+
+.header .subnar .category img {
+    width: 59px;
+}
+
+.header .subnar .category .name {
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+}
+
+.header .subnar .category .name img {
+    width: 35px;
+}
+
+.header .subnar .category .more {
+    width: 1140px;
+    height: 44px;
+    /* background-color: rgb(130, 43, 156); */
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 30px;
+
+}
+
+.header .subnar .category .more .more-left {
+    float: left;
+    width: 72px;
+    height: 44px;
+    border-radius: 23px;
+    background-color: #f7f8fa;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+}
+
+.header .subnar .category .more .more-main {
+    display: inline-block;
+    width: 321px;
+    height: 44px;
+    font-size: 14px;
+    background-color: #f7f8fa;
+    border-radius: 22px;
+
+}
+
+.header .subnar .category .more .more-main>span {
+    display: inline-block;
+    float: left;
+    width: 160px;
+    height: 44px;
+    line-height: 44px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.header .subnar .category .more .more-main .all {
+    border-right: 0.01rem solid #8a8f99;
+}
+
+.header .subnar .category .more .more-right {
+    float: right;
+    width: 72px;
+    height: 44px;
+    border-radius: 23px;
+    background-color: #f7f8fa;
+    text-align: center;
+    line-height: 44px;
+    font-size: 20px;
+}

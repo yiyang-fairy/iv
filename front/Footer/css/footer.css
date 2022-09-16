@@ -1,0 +1,221 @@
+
+        #footer {
+            position: relative;
+        }
+
+        #footer ul,
+        a {
+            list-style: none;
+            text-decoration: none;
+            color: #000;
+            padding: 0;
+        }
+
+        #footer .fuwu {
+            width: 1300px;
+            height: 91px;
+            /* background-color: aqua; */
+        }
+
+        #footer .fuwu>ul {
+            width: 1208px;
+            height: 90px;
+            margin: auto;
+            padding: 0;
+            /* background-color: blue; */
+        }
+
+        #footer .fuwu>ul>li {
+            width: 300px;
+            height: 90px;
+            /* display: inline-block; */
+            /* background-color: brown; */
+            float: left;
+            line-height: 90px;
+            border-right: 1px solid #e0e0e0;
+        }
+
+        #footer .fuwu a {
+            font-size: 18px;
+            color: black;
+            margin-left: 72px;
+            text-decoration: none;
+        }
+
+        #footer .qita {
+            width: 1300px;
+            height: 612px;
+
+        }
+
+        #footer .qita .wrap {
+            width: 1300px;
+            height: 536px;
+            padding-top: 76px;
+        }
+
+        #footer .qita .wrap .content {
+            width: 1140px;
+            height: 389px;
+            margin-top: 50px;
+            padding-left: 60px;
+        }
+
+
+        #footer .qita .wrap .content>dl {
+            float: left;
+            width: 160px;
+            margin: 0;
+
+        }
+
+        #footer .qita .wrap .content>dl>dt {
+            margin: 0 0 26px;
+            font-size: 16px;
+            color: black;
+            text-align: center;
+
+        }
+
+        #footer .qita .wrap .footer-bottom {
+            width: 1300px;
+            height: 73px;
+        }
+
+        #footer .qita .wrap .content dl dd,
+        #footer .qita .wrap .content dl a {
+            color: #757575;
+            font-size: 14px;
+            margin-top: 13px;
+        }
+
+        #footer .qita .wrap .content dl dd {
+            line-height: 17px;
+        }
+
+        #footer .qita .wrap .content dl a:hover {
+            color: #120db4;
+        }
+
+        #footer .content a:hover {
+            color: #120db4;
+        }
+
+        #footer .content a {
+            color: #424242;
+        }
+
+        #footer .contact {
+            width: 262px;
+            height: 389px;
+            /* background-color: #757575; */
+            display: inline-block;
+            position: absolute;
+            right: 40px;
+            bottom: 130px;
+        }
+
+        #footer .contact>div {
+            width: 262px;
+            /* background-color: aqua; */
+            display: inline-block;
+
+        }
+
+        #footer .footfstyle {
+            font-family: VIVO-FONT-WEB-BOLD, VIVO-FONT-NAV-BOLD, sans-serif;
+            color: #242933;
+
+        }
+
+        #footer .foot-phone {
+            font-size: 28px;
+            line-height: 30px;
+        }
+
+        #footer .foot-p {
+            font-size: 16px;
+            line-height: 18px;
+            margin-bottom: 4px;
+            position: relative;
+        }
+
+        #footer .foot-f-size12 {
+            font-size: 12px;
+        }
+
+        #footer {
+            font-size: 12px;
+            line-height: 16px;
+            max-width: 1226px;
+            margin: 0 auto;
+            padding: 28px 0;
+            border-top: 1px solid transparent;
+            overflow: hidden;
+        }
+
+        #footer .footer-bottom {
+            padding-left: 70px;
+            position: absolute;
+            bottom: 0px;
+
+        }
+
+        #footer .footer-bottom .foot-b {
+            font-size: 12px;
+            line-height: 16px;
+            color: #000;
+        }
+
+        #footer .iconfont {
+            font-size: 25px;
+        }
+
+        #footer .guanzhu-vivo {
+            width: 262px;
+            height: 100px;
+            position: relative;
+        }
+
+        #footer .guanzhu-vivo li {
+            /* display: inline-block; */
+            float: left;
+            margin: 20px 10px 0 10px;
+
+        }
+
+
+        #footer .guanzhu-img-d {
+            width: 172px;
+            height: 200px;
+            background-color: #fff;
+            /* top: -220px;
+            left: 50%; */
+            margin-bottom: 25px;
+        }
+
+        #footer .guanzhu-img-d>img {
+            display: inline-block;
+            margin-top: 16px;
+            margin-bottom: 12px;
+            width: 140px;
+            height: 140px;
+        }
+
+        #footer .guanzhu-img-d>span {
+            display: block;
+            font-size: 12px;
+            color: #8a8f99;
+        }
+
+
+        #footer .guanzhu-vivo li .guanzhu-img-d {
+            display: none;
+            position: absolute;
+            top: -160px;
+        }
+
+        #footer .guanzhu-vivo li:hover .guanzhu-img-d {
+            display: block;
+        }
+    

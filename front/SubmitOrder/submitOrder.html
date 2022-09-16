@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./vivo.css">
+    <link rel="stylesheet" href="../head/head.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <script type="text/javascript" src="../head/header.js"></script>
+
+</head>
+
+<body>
+    <div class="background"></div>
+
+    <main>
+        <div class="firstBox">
+            <h1>核对订单信息</h1>
+        </div>
+        <div class="mainBox secondBox">
+            <h1>收货人信息</h1>
+            <div class="showInfoBox">
+                <div>
+                    <img src="./img/round_add.png" alt="">
+                    <a href="#">添加新地址</a>
+                </div>
+            </div>
+            <div class="infoBox">
+                <p id="infoClose">X</p>
+                <h2>新建收货地址</h2>
+                <div>
+                    <span>*</span>
+                    <span>收货人:</span>
+                    <input class="personInp" onblur="personPass()" type="text">
+                </div>
+                <p class="personP itemP"></p>
+                <div>
+                    <span>*</span>
+                    <span>手机号码:</span>
+                    <input class="phoneInp" onblur="phonePass()" type="text">
+                </div>
+                <p class="phoneP itemP"></p>
+                <div class="addressChoose">
+                    <span>*</span>
+                    <span>收获地区:</span>
+                    <select class="sheng" onchange="sheng()">
+                        <option>请选择</option>
+                        <option>四川</option>
+                        <option>贵阳</option>
+                        <option>广东</option>
+                    </select>
+                    <select class="shi" onchange="shi()">
+                        <option>请选择</option>
+                    </select>
+                    <select class="qu">
+                        <option>请选择</option>
+
+                    </select>
+                </div>
+                <p></p>
+                <div>
+                    <span>*</span>
+                    <span>详细地址:</span>
+                    <input class="addressInp" onblur="addressPass()" type="text">
+                </div>
+                <p class="addressP itemP"></p>
+                <p class="checkBox">
+                    <input type="checkbox">
+                    <a>设为默认地址</a>
+                </p>
+                <div class="addressSure">保存</div>
+            </div>
+        </div>
+        <div class="mainBox thirdBox">
+            <h1>电子发票</h1>
+            <div class="invoiceBox">
+                <span>个人发票</span>
+                <span>企业发票</span>
+            </div>
+            <!-- 个人发票 -->
+            <div class="riseBox">
+                <div>
+                    <span>*</span>
+                    <span>发票抬头：</span>
+                    <input type="text" placeholder="个人">
+                </div>
+                <p><a href="#">常见问题</a></p>
+            </div>
+            <!-- 企业发票 -->
+            <div class="riseBox">
+                <div>
+                    <span>*</span>
+                    <span>发票抬头：</span>
+                    <input type="text" placeholder="请输入发票抬头">
+                </div>
+                <div>
+                    <span>*</span>
+                    <span>纳税人识别号：</span>
+                    <input class="fapiao" type="text" placeholder="请填写购买方纳税人识别号或统一社会信息用代码">
+                </div>
+                <p class="enterprise">
+                    <span>根据最新增值税管理办法，如需企业抬头发票，请填写有效税号信息</span>
+                    <a href="#">常见问题</a>
+                </p>
+                <p class="moreInfo">
+                    点击填写开户行、账号、地址和电话信息
+                    <img src="./img/arrow-down.png" alt="">
+                </p>
+                <div class="moreInfoBox">
+                    <div class="accountBox">
+                        <span></span>
+                        <span>开户行及账号：</span>
+                        <input type="text" placeholder="请填写开户银行及银行账号（选填）">
+                    </div>
+                    <div>
+                        <span></span>
+                        <span>地址、电话： </span>
+                        <input type="text" placeholder="请填注册地址、电话（选填）">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainBox fourBox">
+            <h1>确认商品</h1>
+            <div class="products-title">
+                <div>商品名称</div>
+                <div>价格（元）</div>
+                <div>数量</div>
+                <div>优惠</div>
+                <div>小计（元）</div>
+            </div>
+            <div class="products-info">
+                <div class="products-top">
+                    <div>
+                        <a href="#">
+                            <img src="./img/phoneInfo.png" alt="">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">vivo X80 12GB+256GB 至黑</a>
+                        <span>至黑</span>
+                    </div>
+                    <div class="sameHeight">4399.00</div>
+                    <div class="sameHeight">1</div>
+                    <div class="sameHeight">0.00</div>
+                    <div class="sameHeight">4399.00</div>
+                </div>
+                <div class="products-bottom">
+                    <div class="giftBox">【赠品】：</div>
+                    <div class="normal-module">
+                        <div class="normal-item">
+                            <div class="normal-item-left">
+                                <img src="./img/20_20200325165425958_100x100.jpg" alt="">
+                                <a>半年延保-69元</a>
+                            </div>
+                            <div class="normal-item-right">69.00</div>
+                        </div>
+                        <div class="normal-item">
+                            <div class="normal-item-left">
+                                <img src="./img/10007615_1661420180737_100x100.png" alt="">
+                                <a>趣味贴纸</a>
+                            </div>
+                            <div class="normal-item-right">9.90</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mainBox fiveBox">
+            <div class="cardBox">
+                <img src="./img/down.png" alt="">
+                <span>定制贺卡</span>
+                <a id="congratulate"></a>
+            </div>
+            <div class="addBox">
+                <img src="./img/add.png" alt="">
+                <a id="addGreet">添加贺卡和祝福语</a>
+            </div>
+            <div class="greetCard">
+                <p>X</p>
+                <h2>定制贺卡</h2>
+                <div>
+                    <input type="text" placeholder="请输入祝福语">
+                    <a id="clear">X</a>
+                </div>
+                <div>
+                    <img src="./img/10006977_1635493392913_530x530.png" alt="">
+                </div>
+                <div class="addCard">添加贺卡</div>
+            </div>
+        </div>
+        <div class="mainBox fiveBox">
+            <div class="cardBox cardBox2">
+                <span>使用优惠券</span>
+                <span>没有有可用的优惠券</span>
+            </div>
+            <div class="addBox">
+                <img src="./img/add.png" alt="">
+                <a id="coupons">添加站外券</a>
+            </div>
+            <div class="couponsBox">
+                <p class="close">X</p>
+                <p>添加从其他途径获取多优惠券</p>
+                <input onblur="check()" type="text" placeholder="请输入券号">
+                <div onclick="checkOver()">确定</div>
+            </div>
+        </div>
+        <div class="mainBox sixBox">
+            <section>
+                <div class="sixBox-top">
+                    <div class="row">
+                        <div class="name">已选 1 件商品，合计 (不含运费)：</div>
+                        <div class="price">￥4399.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="name">运费：</div>
+                        <div class="price">¥0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="name">优惠：</div>
+                        <div class="price">-0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="name">赠送积分：</div>
+                        <div class="price">4399</div>
+                    </div>
+                </div>
+                <div class="sixBox-bottom">
+                    <div class="total">
+                        <span>应付总额：</span>
+                        <span>¥4399.00</span>
+                    </div>
+                    <div class="addressPerson">收件人:</div>
+                    <div class="addressPerson">配送地址:</div>
+                </div>
+                <div class="submitBox">
+                    <div class="submit">提交订单</div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <object type="text/x-scriptlet" data="../Footer/footer.html" width=100% height=800px></object>
+    <script src="./vivo.js"></script>
+</body>
+
+</html>

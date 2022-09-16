@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="series.css">
+    <link rel="stylesheet" href="../head/head.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+                $(".next").click(function () {
+                    let Ori = $(".swiper-wrapper").css("marginLeft");
+                    let ori = Number(Ori.substr(0, Ori.length - 2));
+
+                    if (ori > -736) {
+                        $(".swiper-wrapper").css("marginLeft", ori - 184 + "px");
+                        console.log($(".swiper-wrapper").css("marginLeft"), "ori", ori)
+                    } else {
+                        $(".swiper-wrapper").css("marginLeft", "-736px")
+                    }
+                })
+                $(".prev").click(function () {
+                        let Ori = $(".swiper-wrapper").css("marginLeft");
+                        let ori = Number(Ori.substr(0, Ori.length - 2));
+                        if (ori < 0) {
+                            $(".swiper-wrapper").css("marginLeft", ori + 184 + "px");
+                            console.log($(".swiper-wrapper").css("marginLeft"), "ori", ori)
+                        } else {
+                            $(".swiper-wrapper").css("marginLeft", 0 + "px")
+                        }
+                    }
+
+                )
+            }
+
+        );
+    </script>
+
+    <script type="text/javascript" src="../head/header.js"></script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="series-content">
+        <div class="header-content-box">
+            <div class="header-content-txt">
+                <div>
+                    <img
+                        src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/series/20201123/bb21c530daa0e07e6bffdcf0401a000e.svg">
+                </div>
+                <div class="title">专业影像旗舰</div>
+                <div class="auxiliaryTitle">蔡司影像 超越所见</div>
+            </div>
+        </div>
+        <div class="swiper-container">
+            <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X80proimg.jpg">
+                        <p class="imgName">X80 Pro </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X80img.jpg">
+                        <p class="imgName">X80 </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/XFoldimg.png">
+                        <p class="imgName">X Fold </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/XNoteimg.png">
+                        <p class="imgName">X Note</p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X70pro+img.png">
+                        <p class="imgName">X70 Pro+ </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X70proimg.png">
+                        <p class="imgName">X70 Pro </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X70img.png">
+                        <p class="imgName">X70 </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X60tpro+img.png">
+                        <p class="imgName">X60 Pro+ </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X60曲屏版.png">
+                        <p class="imgName">X60 曲屏版 </p>
+                    </a>
+                </li>
+                <li class="swiper-slide">
+                    <a>
+                        <img src="img/X60pro+img.png">
+                        <p class="imgName">X60 Pro+ </p>
+                    </a>
+                </li>
+            </ul>
+            <div class="btn-wraper">
+                <span class="iconfont prev">&#xeb04;</span>
+                <span class="iconfont next">&#xeb03;</span>
+            </div>
+        </div>
+        <div class="rec-item-box">
+            <div class="rec-content">
+                <div class="content-img">
+                    <img
+                        src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/series/20220425/1d0f8b77d19ca3b64f87ece43956953e.svg">
+                </div>
+                <div class="title">自研影像芯片V1+<br>4nm旗舰芯片</div>
+                <div class="btn-box">
+                    <a href="#" class="more">了解更多</a>
+                    <a class="buy" href="#">
+                        <span>立即购买</span>
+                        <img src="img/箭头.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="rec-img">
+                <img class="" src="img/X80pro图片1.jpg">
+            </div>
+        </div>
+        <div class="rec-item-box">
+            <div class="rec-content different">
+                <div class="content-img">
+                    <img
+                        src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/series/20220425/7584a489bda5e4092a6c6c29fb263812.svg">
+                </div>
+                <div class="title">全球首发IMX866 RGBW<br>大底传感器</div>
+                <div class="btn-box">
+                    <a href="#" class="more">了解更多</a>
+                    <a class="buy" href="#">
+                        <span>立即购买</span>
+                        <img src="img/箭头.svg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="rec-img dif-img">
+                <img class="" src="img/X80图片.jpg">
+            </div>
+        </div>
+
+        <div class="series-title">
+            <p>哪款手机更适合你?</p>
+            <div class="hover-blue">
+                <span>比较各款手机</span>
+                <img src="img/箭头.svg" alt="">
+            </div>
+        </div>
+        <div class="series-compare">
+            <div>
+                <ul>
+                    <li>
+                        <div class="compare-img-list">
+                            <img class="" src="img/X80proimg.jpg">
+                            <img class="hide" src="img/X70pro黑色.png">
+                            <img class="hide" src="img/X80img.jpg">
+                        </div>
+                        <p>X80 Pro</p>
+                        <div class="colors">
+                            <div class="color-view-box">
+                                <div class="color-view" data-name="旅程" data-index="0">
+                                    <span style="background-color: #D94206;"></span></div>
+                                <div class="color-view" data-name="至黑" data-index="1"><span
+                                        style="background-color: #000000;"></span></div>
+                                <div class="color-view" data-name="假日" data-index="2"><span
+                                        style="background-color: #58D3D7;"></span></div>
+                                <span class="color-name" title="旅程">旅程</span>
+                            </div>
+                        </div>
+                        <a class="compare-link-btn" href="#">购买¥5439起</a>
+                        <div class="btn-box">
+                            <a class="buy" href="#">
+                                <span>了解更多</span>
+                                <img src="img/箭头.svg" alt="">
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="compare-img-list">
+                            <img class="" src="img/X80img.jpg">
+                            <img class="hide" src="img/X80proimg.jpg">
+                            <img class="hide" src="img/X70pro黑色.png">
+                        </div>
+                        <p>X80</p>
+                        <div class="colors">
+                            <div class="color-view-box">
+                                <div class="color-view " data-name="假日" data-index="0">
+                                    <span style="background-color: #58D3D7;"></span></div>
+                                <div class="color-view" data-name="旅程" data-index="1"><span
+                                        style="background-color: #D94206;"></span></div>
+                                <div class="color-view" data-name="至黑" data-index="2"><span
+                                        style="background-color: #000000;"></span></div>
+                                <span class="color-name" title="假日">假日</span>
+                            </div>
+                        </div>
+                        <a class="compare-link-btn" target="_blank" href="#">购买¥3669起</a>
+                        <div class="btn-box">
+                            <a class="buy" href="#">
+                                <span>了解更多</span>
+                                <img src="img/箭头.svg" alt="">
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="series-title">
+            <p>精选配件</p>
+            <span>为了更好的产品体验，我们为您精选了相关配件</span>
+        </div>
+
+        <div class="series-parts">
+            <ul>
+                <li>
+                    <div class="part-content">
+                        <div class="content-img">
+                            <img
+                                src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/series/20220415/17745463e36c02cd4a6590fe61560d5e.svg">
+                        </div>
+                        <div class="title">一碰互传<br>更方便</div>
+                        <div class="section-btn">
+                            <a class="btn-link" href="#">立即购买 <img src="img/箭头.svg" alt=""></a>
+
+                        </div>
+                    </div>
+                    <div class="part-img">
+
+                        <img class="" src="img/vivoPad图片.png">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="part-content">
+                        <div class="content-img">
+                            <img
+                                src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/series/20220119/a8b8325921d285b3df45282d6cb4c28a.svg">
+                        </div>
+                        <div class="title">真无线降噪耳机</div>
+                        <div class="section-btn">
+                            <a class="btn-link" href="#">立即购买 <img src="img/箭头.svg" alt=""></a>
+
+                        </div>
+                    </div>
+                    <div class="part-img">
+
+                        <img class="" src="img/vivoTWS2图片.png">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="part-content">
+                        <div class="content-img">
+                            <img
+                                src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/series/20201123/f9dc8c3c44383a701d9374ea1b58e596.svg">
+                        </div>
+                        <div class="title">移动电源</div>
+                        <div class="section-btn">
+                            <a class="btn-link" href="#">立即购买 <img src="img/箭头.svg" alt=""></a>
+
+                        </div>
+                    </div>
+                    <div class="part-img">
+
+                        <img class="" src="img/18W移动电源.jpg">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="part-content">
+                        <div class="content-img">
+                            <img
+                                src="https://wwwstatic.vivo.com.cn/vivoportal/files/image/series/20201123/e2f3f430bf9d7042198a75eb4ccb01ef.svg">
+                        </div>
+                        <div class="title">原装充电器</div>
+                        <div class="section-btn">
+                            <a class="btn-link" href="#">立即购买 <img src="img/箭头.svg" alt=""></a>
+
+                        </div>
+                    </div>
+                    <div class="part-img">
+                        <picture>
+
+                            <img class="" src="img/33W充电器.jpg">
+
+                    </div>
+                </li>
+                <li>
+                    <div class="part-content">
+                        <div class="title">挑选更多配件</div>
+                        <div class="section-btn">
+                            <span class="btn-link">你的配件由你做主</span>
+                        </div>
+                    </div>
+                    <div class="toMore">
+                        <img src="img/箭头.svg" alt="">
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+
+    </div>
+
+    <object type="text/x-scriptlet" data="../Footer/footer.html" width=100% height=800px></object>
+
+</body>
+
+</html>

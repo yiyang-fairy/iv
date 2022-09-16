@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="category.css">
+    <link rel="stylesheet" href="../head/head.css">
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+    </script>
+
+    <script>
+        //点击后动态列表<!-- 手机-配件-服务 -->
+        $(document).ready(function () {
+            $('.Phone').click(function () {
+                $('.Phone-ul').show();
+                $('.Phone-ul').siblings('ul').hide();
+                $('.u1').show();
+                $('.u1').siblings('filter-tags').hide();
+                $('.change-name').text("智能手机");
+            });
+            $('.AccProduce').click(function () {
+                $('.u1').hide();
+                $('.u2').show();
+                $('.u3').hide();
+                $('.AccProduce-ul').show();
+                $('.AccProduce-ul').siblings('ul').hide();
+
+                $('.change-name').text("配件产品");
+            });
+            $('.Serve').click(function () {
+                $('.u1').hide();
+                $('.u2').hide();
+                $('.u3').show();
+                $('.Serve-ul').show();
+                $('.Serve-ul').siblings('ul').hide();
+                $('.change-name').text("服务");
+            });
+
+            //点击后字体变黑动态下划线，<!-- 手机-配件-服务 -->
+        $(function () {
+            let lis = document.querySelectorAll('.filter-tab-menu')
+            console.log(lis)
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].onclick = function () {
+                    $(this).children().css("color", "#000")
+                    $(this).siblings('.filter-tab-menu').children().css("color", "#777")
+                    $(this).addClass('active')
+                    $(this).siblings('.filter-tab-menu').removeClass('active')
+                    $('.AddText').text('')
+                }
+            }
+        })
+
+        //点击后字体变黑,上面改变
+        $(function () {
+            let lis = document.querySelectorAll('.filter-tab-cont')
+            console.log(lis)
+            $('.filter-tab-cont a').click(function () {
+                $(this).css("color", "#000")
+                $(this).siblings('a').css("color", "#777")
+                $('.AddText').text(" > " + $(this).text())
+            })
+        })
+
+
+        $(function () {
+            $('.vivo-X').click(function () {
+                $('.Phone-ul').hide();
+                $('.Phone-vivoX').show();
+
+            })
+            $('.vivo-all').click(function () {
+                $('.Phone-ul').show();
+                $('.Phone-vivoX').hide();
+
+            })
+
+        })
+
+        //页面按钮，点击后边框颜色变黑
+        $(function () {
+            $('.pagination_btn').click(function () {
+                $(this).css('border-color', 'black')
+                $(this).siblings('.pagination_btn').css('border-color', '#ddd')
+
+
+            })
+        })
+
+        //点击跳转至商品详情页面
+        $('.spu-item-list .spu-item').click(function () {
+            window.open('/Detail/detail.html', '')
+          })
+
+        });
+
+        
+    </script>
+
+    <script type="text/javascript" src="../head/header.js"></script>
+</head>
+
+<body>
+
+    <div class="product-list">
+        <!-- 商城首页导航 -->
+        <div class="crumbs">
+            <a href="/index.html" class="first">商城首页</a>
+            <span> > </span>
+            <div class="nav-inline">
+                <span class="change-name">智能手机</span>
+                <span class="AddText"></span>
+            </div>
+        </div>
+        <!-- 分类导航 -->
+        <div class="wrapper">
+            <div class="filter-wrap">
+                <!-- 手机-配件-服务 -->
+                <ul class="filter-tab">
+                    <li class="filter-tab-menu active">
+                        <a href="#" class="Phone"> 智能手机
+                        </a>
+                    </li>
+                    <li class="filter-tab-menu">
+                        <a href="#" class="AccProduce"> 配件产品 </a>
+                    </li>
+                    <li class="filter-tab-menu">
+                        <a href="#" class="Serve"> 服务 </a>
+                    </li>
+                    <!-- 具体类别 -->
+                </ul>
+                <!-- 手机 -->
+                <ul class="filter-tags u1">
+                    <li class="filter-tab-cont">
+                        <a href="#" class="colorBlack vivo-all"> 全部 </a>
+                        <a href="#" class="vivo-X"> vivo X </a>
+                        <a href="#"> vivo S </a>
+                        <a href="#"> vivo T </a>
+                        <a href="#">vivo Y </a>
+                        <a href="#"> iQOO 旗舰 </a>
+                        <a href="#"> iQOO Neo </a>
+                        <a href="#">iQOO Z </a>
+                        <a href="#"> iQOO U </a>
+                    </li>
+                </ul>
+                <!-- 配件 -->
+                <ul class="filter-tags u2">
+                    <li class="filter-tab-cont">
+                        <a href="#" class="colorBlack"> 全部 </a>
+                        <a href="#"> 平板手表 </a>
+                        <a href="#"> 手机充电 </a>
+                        <a href="#"> 手机配件 </a>
+                        <a href="#"> 音乐设备 </a>
+                        <a href="#"> 智能硬件 </a>
+                        <a href="#"> 游戏摄影</a>
+                        <a href="#"> 日用出行 </a>
+                    </li>
+                </ul>
+                <!-- 服务 -->
+                <ul class="filter-tags u3">
+                    <li class="filter-tab-cont">
+                        <a href="#" class="colorBlack"> 全部 </a>
+                        <a href="#"> 碎屏宝 </a>
+                        <a href="#"> V享无忧 </a>
+                        <a href="#"> 延保 </a>
+                        <a href="#"> 意外宝 </a></li>
+                </ul>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="container wrapper">
+            <!-- 手机分类页--全部 -->
+            <ul class="spu-item-list Phone-ul">
+                <li class="spu-item"><a href="#" title="iQOO Z6x 8GB+128GB 蓝冰">
+                        <div class="crner-good">
+                            <img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245379698434_100x100.png">
+                        </div>
+                        <div class="figure">
+                            <img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/10007671_1661237917138_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO Z6x 8GB+128GB 蓝冰</p>
+                            <p class="feature">
+                                6000mAh 巨量电池|疾速 44W 闪充|6nm 5G 强劲芯|5000万像素超清主摄 </p>
+                            <p class="price rmb-symbol">1399.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="iQOO Z6x 8GB+256GB 黑镜">
+                        <div class="crner-good">
+                            <img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245379698434_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/10007671_1661237896690_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO Z6x 8GB+256GB 黑镜</p>
+                            <p class="feature">
+                                6000mAh 巨量电池|疾速 44W 闪充|6nm 5G 强劲芯|5000万像素超清主摄 </p>
+                            <p class="price rmb-symbol">1599.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="iQOO Z6 12GB+256GB 星海">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245379698434_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/70/10007670_1661237680618_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO Z6 12GB+256GB 星海</p>
+                            <p class="feature">
+                                双电芯 80W 闪充|6400万像素 OIS 光学防抖|骁龙778G Plus 性能铁三角|120Hz 原色护眼屏 </p>
+                            <p class="price rmb-symbol">2099.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="iQOO Z6  8GB+256GB 墨玉">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245379698434_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/70/10007670_1661237647742_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO Z6 8GB+256GB 墨玉</p>
+                            <p class="feature">
+                                双电芯 80W 闪充|6400万像素 OIS 光学防抖|骁龙778G Plus 性能铁三角|120Hz 原色护眼屏 </p>
+                            <p class="price rmb-symbol">1899.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="vivo Y77e 8GB+256GB 晶钻粉">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245379698434_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/57/10007657_1660547467638_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo Y77e 8GB+256GB 晶钻粉</p>
+                            <p class="feature">
+                                5000mAh大电池|1080P超清护眼屏|天玑810芯片 </p>
+                            <p class="price rmb-symbol">1799.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="vivo Y77e 8GB+128GB 夏日听海">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245379698434_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/57/10007657_1660113239437_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo Y77e 8GB+128GB 夏日听海</p>
+                            <p class="feature">
+                                5000mAh大电池|1080P超清护眼屏|天玑810芯片 </p>
+                            <p class="price rmb-symbol">1599.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="vivo Y32t 4G版 8GB+256GB版 午夜黑">
+                        <div class="crner-good"><img
+                                src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20210603/5e0fbf9c00a15e8c3d2b751cf06af489.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/47/10007647_1659421344780_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo Y32t 4G版 8GB+256GB版 午夜黑</p>
+                            <p class="feature">
+                                <span class="sale-point">【限时直降100元】</span>
+                                骁龙680芯片|5000mAh大电池|后置1300万清晰影像
+                            </p>
+                            <p class="price rmb-symbol">1199.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="vivo Y32t 4G版 8GB+128GB 浅岸蓝">
+                        <div class="crner-good"><img
+                                src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20210603/5e0fbf9c00a15e8c3d2b751cf06af489.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/47/10007647_1661415341923_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo Y32t 4G版 8GB+128GB 浅岸蓝</p>
+                            <p class="feature">
+                                <span class="sale-point">【限时直降100元】</span>
+                                P70芯片|5000mAh大电池|后置1300万清晰影像
+                            </p>
+                            <p class="price rmb-symbol">999.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="iQOO 10 Pro 12GB+256GB 传奇版">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/10007573_1658128822930_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 10 Pro 12GB+256GB 传奇版</p>
+                            <p class="feature">
+                                200W 超快闪充|自研芯片 V1+|第一代骁龙 8+|2K E5 LTPO 屏幕|超声波 3D 广域指纹 </p>
+                            <p class="price rmb-symbol">5499.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="iQOO 10 Pro 12GB+512GB 赛道版">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/10007573_1658128828223_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 10 Pro 12GB+512GB 赛道版</p>
+                            <p class="feature">
+                                200W 超快闪充|自研芯片 V1+|第一代骁龙 8+|2K E5 LTPO 屏幕|超声波 3D 广域指纹 </p>
+                            <p class="price rmb-symbol">5999.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="iQOO 10 12GB+256GB 传奇版">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/72/10007572_1658749716358_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 10 12GB+256GB 传奇版</p>
+                            <p class="feature">
+                                第一代骁龙 8+|自研芯片 V1+|6.78 英寸 E5 屏|全感操控系统|120W超快闪充 </p>
+                            <p class="price rmb-symbol">4249.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="iQOO 10 8GB+256GB 赛道版">
+                        <div class="crner-good"><img
+                                src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20210603/5e0fbf9c00a15e8c3d2b751cf06af489.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/72/10007572_1658128645603_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 10 8GB+256GB 赛道版</p>
+                            <p class="feature">
+                                第一代骁龙 8+|自研芯片 V1+|6.78 英寸 E5 屏|全感操控系统|120W超快闪充 </p>
+                            <p class="price rmb-symbol">3949.00</p>
+                        </div>
+                    </a></li>
+            </ul>
+            <!--手机分类页--vivo X  -->
+            <ul class="spu-item-list Phone-vivoX">
+                <li class="spu-item"><a target="_blank" href="/product/10007338?skuId=123025"
+                        title="vivo X80 Pro 天玑9000版 12GB+512GB 至黑"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X80 Pro 天玑9000版 12GB+512GB 至黑&quot;,&quot;position&quot;:0}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358114777_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358114777_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X80 Pro 天玑9000版 12GB+512GB 至黑</p>
+                            <p title="蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片" class="feature">
+                                <!----> 蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片 </p>
+                            <p class="price rmb-symbol">6699.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007338?skuId=123022"
+                        title="vivo X80 Pro 天玑9000版 12GB+512GB 旅程"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X80 Pro 天玑9000版 12GB+512GB 旅程&quot;,&quot;position&quot;:1}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358095399_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358095399_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X80 Pro 天玑9000版 12GB+512GB 旅程</p>
+                            <p title="蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片" class="feature">
+                                <!----> 蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片 </p>
+                            <p class="price rmb-symbol">6699.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10006322?skuId=120571"
+                        title="vivo X60t 8GB+128GB 原力"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X60t 8GB+128GB 原力&quot;,&quot;position&quot;:2}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/22/10006322_1616384021873_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/22/10006322_1616384021873_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X60t 8GB+128GB 原力</p>
+                            <p title="蔡司光学镜头|全场景智慧影像|薄至7.36mm|120Hz高刷新率" class="feature">
+                                <!----> 蔡司光学镜头|全场景智慧影像|薄至7.36mm|120Hz高刷新率 </p>
+                            <p class="price rmb-symbol">2099.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007336?skuId=123015"
+                        title="vivo X80 Pro 12GB+256GB 至黑"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X80 Pro 12GB+256GB 至黑&quot;,&quot;position&quot;:3}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358109769_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358109769_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X80 Pro 12GB+256GB 至黑</p>
+                            <p title="蔡司T*光学镜头|自研芯片V1+|全新一代骁龙8" class="feature">
+                                <!----> 蔡司T*光学镜头|自研芯片V1+|全新一代骁龙8 </p>
+                            <p class="price rmb-symbol">5999.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007336?skuId=123014"
+                        title="vivo X80 Pro 8GB+256GB 旅程"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X80 Pro 8GB+256GB 旅程&quot;,&quot;position&quot;:4}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358100763_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/36/10007336_1650358100763_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X80 Pro 8GB+256GB 旅程</p>
+                            <p title="蔡司T*光学镜头|自研芯片V1+|全新一代骁龙8" class="feature">
+                                <!----> 蔡司T*光学镜头|自研芯片V1+|全新一代骁龙8 </p>
+                            <p class="price rmb-symbol">5499.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007339?skuId=123038"
+                        title="vivo X80 8GB+256GB 假日"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X80 8GB+256GB 假日&quot;,&quot;position&quot;:5}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/10007339_1650880830224_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/10007339_1650880830224_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X80 8GB+256GB 假日</p>
+                            <p title="蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片" class="feature">
+                                <!----> 蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片 </p>
+                            <p class="price rmb-symbol">3999.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007339?skuId=123033"
+                        title="vivo X80 12GB+256GB 至黑"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X80 12GB+256GB 至黑&quot;,&quot;position&quot;:6}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/10007339_1650436536314_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/39/10007339_1650436536314_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X80 12GB+256GB 至黑</p>
+                            <p title="蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片" class="feature">
+                                <!----> 蔡司T*光学镜头|自研芯片V1+|天玑9000旗舰芯片 </p>
+                            <p class="price rmb-symbol">4399.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007286?skuId=122947"
+                        title="vivo X Note 8GB+256GB 晴山蓝"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X Note 8GB+256GB 晴山蓝&quot;,&quot;position&quot;:7}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/86/10007286_1649238549035_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/86/10007286_1649238549035_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X Note 8GB+256GB 晴山蓝</p>
+                            <p title="7'' 2K+E5超感宽幕|5000mAh大电池|3D大面积指纹|全新一代骁龙8" class="feature">
+                                <!----> 7'' 2K+E5超感宽幕|5000mAh大电池|3D大面积指纹|全新一代骁龙8 </p>
+                            <p class="price rmb-symbol">5499.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007286?skuId=122944"
+                        title="vivo X Note 12GB+256GB 璨夜黑"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X Note 12GB+256GB 璨夜黑&quot;,&quot;position&quot;:8}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/86/10007286_1649238319756_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/10007573_1658128828223_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X Note 12GB+256GB 璨夜黑</p>
+                            <p title="7'' 2K+E5超感宽幕|5000mAh大电池|3D大面积指纹|全新一代骁龙8" class="feature">
+                                <!----> 7'' 2K+E5超感宽幕|5000mAh大电池|3D大面积指纹|全新一代骁龙8 </p>
+                            <p class="price rmb-symbol">5999.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007344?skuId=123055"
+                        title="vivo X Fold 12GB+256GB 梧桐灰"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X Fold 12GB+256GB 梧桐灰&quot;,&quot;position&quot;:9}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/88/10007288_1649402137203_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/10007573_1658128822930_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X Fold 12GB+256GB 梧桐灰</p>
+                            <p title="2K+120Hz E5折叠巨幕|航天级浮翼式铰链|双屏幕指纹|全新一代骁龙8" class="feature">
+                                <!----> 2K+120Hz E5折叠巨幕|航天级浮翼式铰链|双屏幕指纹|全新一代骁龙8 </p>
+                            <p class="price rmb-symbol">8999.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007344?skuId=123053"
+                        title="vivo X Fold 12GB+256GB 晴山蓝"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X Fold 12GB+256GB 晴山蓝&quot;,&quot;position&quot;:10}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/88/10007288_1649239443059_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/72/10007572_1658749716358_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X Fold 12GB+256GB 晴山蓝</p>
+                            <p title="2K+120Hz E5折叠巨幕|航天级浮翼式铰链|双屏幕指纹|全新一代骁龙8" class="feature">
+                                <!----> 2K+120Hz E5折叠巨幕|航天级浮翼式铰链|双屏幕指纹|全新一代骁龙8 </p>
+                            <p class="price rmb-symbol">8999.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a target="_blank" href="/product/10007030?skuId=122291"
+                        title="vivo X70t 12GB+256GB 星云"
+                        data-clickparams="{&quot;cfrom&quot;:5202,&quot;pageview&quot;:&quot;商品列表页&quot;,&quot;category&quot;:57,&quot;name&quot;:&quot;vivo X70t 12GB+256GB 星云&quot;,&quot;position&quot;:11}">
+                        <!---->
+                        <div class="figure"><img alt=""
+                                data-src="https://shopstatic.vivo.com.cn/vivoshop/commodity/30/10007030_1638781574923_750x750.png.webp"
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/72/10007572_1658128645603_750x750.png.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">vivo X70t 12GB+256GB 星云</p>
+                            <p title="蔡司专业影像|超逆光纯净夜景|旗舰芯片" class="feature">
+                                <!----> 蔡司专业影像|超逆光纯净夜景|旗舰芯片 </p>
+                            <p class="price rmb-symbol">3599.00</p>
+                        </div>
+                    </a></li>
+            </ul>
+
+            <!-- 配件分类页--全部 -->
+            <ul class="spu-item-list AccProduce-ul">
+                <li class="spu-item">
+                    <a href="#">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245379698434_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/10007728_1662369181344_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 10A Type-C to Type-C闪充数据线</p>
+                            <p class="feature">
+                                双Type-C接口设计 | 1.5米线长 | 官方品质保障 | iQOO 200W氮化镓闪充套装原装数据线 </p>
+                            <p class="price rmb-symbol">89.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item">
+                    <a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/88/10007688_1661149382331_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 200W Type-C to Type-C 氮化镓闪充套装</p>
+                            <p class="feature">
+                                支持PD快充 | 高能氮化镓 | 最大输出规格20V/10A </p>
+                            <p class="price rmb-symbol">439.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item">
+                    <a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/87/10007687_1661139583759_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 极风散热背夹 Neo</p>
+                            <p class="feature">
+                                秒速制冷降温 | Halo 极风灯效 | 轻巧流线机身 | 防误触卡扣（注：包装内容不含数据线） </p>
+                            <p class="price rmb-symbol">139.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item">
+                    <a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/50/10007650_1659680354944_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">X Fold 原装保护膜（主屏）透明</p>
+                            <p class="feature">
+                                <span class="sale-point">【限时特惠】</span>
+                                【一片装】 触控灵敏 | 纤薄高透 | 可靠耐用(温馨提醒：贴好后需静置4h再折叠，建议找专业人士贴膜) </p>
+                            <p class="price rmb-symbol">129.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item">
+                    <a target="_blank" href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/31/10007631_1659000300391_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo S15 / iQOO Neo6 SE 原装保护膜 透明</p>
+                            <p class="feature">
+                                【两片装】高清高透 | 耐磨耐脏 | 官方品质 </p>
+                            <p class="price rmb-symbol">29.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/21/10007621_1659422776380_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">iQOO 6A Type-C to Type-C闪充数据线</p>
+                            <p class="feature">
+                                线长约1.5米 | 目前支持X Note/X Fold/X80 pro/iQOO 9 pro/iQOO 10 </p>
+                            <p class="price rmb-symbol">79.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/18/10007618_1659422653461_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo 6A Type-C闪充数据线</p>
+                            <p class="feature">
+                                线长约1米 | 支持120W闪充 | Type-C接口设计 | 官方品质 </p>
+                            <p class="price rmb-symbol">69.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#" title="vivo 66W 闪充套装">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/17/10007617_1658229442334_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo 66W 闪充套装</p>
+                            <p class="feature">
+                                八重安全保护 | 官方品质 | 最大输出规格11V/6A（注：如需退换货，需整套一起办理） </p>
+                            <p class="price rmb-symbol">199.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="/product/10007616?skuId=123744">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/16/10007616_1659927015851_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo 80W Type-C to Type-C 氮化镓闪充套装</p>
+                            <p class="feature">
+                                支持X Fold | 6A数据线 | 80W双口闪充 | 高能效氮化镓 | 最大输出规格20V/4A（注：如需退换货，需整套一起办理） </p>
+                            <p class="price rmb-symbol">299.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/27/10007427_1652764759286_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo TWS Air 真无线耳机 原石蓝</p>
+                            <p class="feature">
+                                14.2mm澎湃高清单元 | 3.5g轻巧舒适佩戴 | 双麦AI通话降噪 | 25h超长续航 </p>
+                            <p class="price rmb-symbol">199.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/37/10007237_1649737424546_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo Pad平板电脑 8GB+128GB 深空灰 </p>
+                            <p class="feature"><span class="sale-point">【限时特惠】</span> 跨屏协同办公 | 高通870芯片 | 120Hz 超感原色屏
+                            </p>
+                            <p class="price rmb-symbol">2399.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/37/10007237_1649735354478_750x750.png.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">vivo Pad平板电脑 8GB+128GB 天蓝色</p>
+                            <p class="feature"><span class="sale-point">【限时特惠】</span> 跨屏协同办公 | 高通870芯片 | 120Hz 超感原色屏
+                            </p>
+                            <p class="price rmb-symbol">2399.00</p>
+                        </div>
+                    </a></li>
+            </ul>
+            <!-- 服务第分类页 -->
+            <ul class="spu-item-list Serve-ul">
+                <li class="spu-item">
+                    <a href="#">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245374667161_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20220425204129983_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">一年延保99元（平板）</p>
+                            <p class="feature"><span class="sale-point">【请您和平板绑定购买或在购机3天内购买】</span> 此服务宝只适合平板 </p>
+                            <p class="price rmb-symbol">99.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245374667161_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20220425204408175_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">意外宝-折扣价469元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span>
+                                限4月15日-9月04日，此服务宝适用于X Note机型 </p>
+                            <p class="price rmb-symbol">469.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20220425204258038_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">意外宝-折扣1699元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span>
+                                限4月15日-9月04日，此服务宝只适合X Fold机型 </p>
+                            <p class="price rmb-symbol">1699.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20210729112022115_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">意外宝-179元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span> 适用于vivo
+                                T1&amp;T1x、iQOO Z5&amp;Z5x、iQOO Neo5 SE、iQOO Z3、iQOO
+                                U3x、Y31s标准版、Y31s、Y52s、Y73s、Y51s、Y71t等机型 </p>
+                            <p class="price rmb-symbol">179.00</p>
+                        </div>
+                    </a></li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20210729113228962_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">意外宝-499元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span>
+                                此服务宝适用于X60tPro+、X60Pro+、X70Pro+ X80 Pro &amp;X 80 Pro天玑版机型 </p>
+                            <p class="price rmb-symbol">499.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20210729113126386_750x750.jpg.webp"
+                                lazy="loaded"></div>
+                        <div class="spu-info">
+                            <p class="name">意外宝-459元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span>
+                                此服务宝适用于iQOO8Pro&amp;iQOO 9Pro&amp;iQOO 10Pro、X60曲屏版、X60Pro、iQOO5Pro、X70 Pro等机型 </p>
+                            <p class="price rmb-symbol">459.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="spu-item"><a href="#">
+                        <div class="crner-good"><img
+                                src="https://shopstatic.vivo.com.cn/vivoshop/corner/20180824/1808245378553371_100x100.png">
+                        </div>
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20210729112344350_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">意外宝-359元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span> 此服务宝适用于iQOO
+                                10、iQOO7、iQOO8、X80、X70、S15 Pro &amp;S12ProS&amp;10Pro、X60、X60t、S9、iQOO5机型 </p>
+                            <p class="price rmb-symbol">359.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20210729112157778_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">意外宝-269元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span>
+                                此服务宝适用于S15、S12、S10、S9e、S7t、S7e活力版、S7e+、S7、iQOONeo5活力版、iQOONeo5等机型 </p>
+                            <p class="price rmb-symbol">269.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20200325192105284_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">一年碎屏宝-249元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span> 此服务宝适用于X80、iQOO
+                                10/iQOO 9、S15 Pro&amp;S12 Pro、X70&amp;X70t、iQOO 8、X60Pro 、X60Pro+、X60曲屏版、iQOO7&amp;iQOO
+                                5 Pro、X50 Pro、X50 Pro+、NEX 3S和NEX 3、NEX 3 5G机型 </p>
+                            <p class="price rmb-symbol">249.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20200619150533018_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">一年V享无忧套装-339元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span> 此服务适用于S12
+                                Pro、iQOO8、X60Pro+，X60Pro、iQOO7、iQOO 5 Pro、X50 Pro、X50 Pro+、NEX 3S和NEX 3、NEX 3
+                                5G和NEX双屏版机型 </p>
+                            <p class="price rmb-symbol">339.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20220530145404586_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">一年延保-599元</p>
+                            <p class="feature"><span class="sale-point">【请您和手机绑定购买或在购机3天内购买】</span> 仅适用于X Fold手机 </p>
+                            <p class="price rmb-symbol">599.00</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="spu-item"><a href="#">
+                        <div class="figure"><img alt=""
+                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/20/20_20220505145124123_750x750.jpg.webp">
+                        </div>
+                        <div class="spu-info">
+                            <p class="name">一年碎屏宝-149（平板）</p>
+                            <p class="feature"><span class="sale-point">【请您和平板绑定购买或在购机3天内购买】</span> 此碎屏保适用于平板 </p>
+                            <p class="price rmb-symbol">149.00</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+
+
+
+            <div class="pagination">
+                <div class="pagination_control">
+                    <span class="pagination_numbers">
+                        <span class="pagination_btn pagination_btn--active"> 1 </span>
+                        <span class="pagination_btn"> 2</span>
+                        <span class="pagination_btn"> 3 </span>
+                        <span class="pagination_btn"> 4</span>
+                        <span class="pagination_btn"> 5 </span>
+                        <span class="ellipsis">...</span>
+                        <span class="pagination_btn">下一页</span> 共8页
+                    </span>
+                    <span class="pagination_go"> ，跳转至 <input type="tel" class="pagination_btn"> 页
+                        <span class="pagination_btn btn--confirm"> 确定
+                        </span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <object type="text/x-scriptlet" data="../Footer/footer.html" width=100% height=800px></object>
+
+</body>
+
+</html>

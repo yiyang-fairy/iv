@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/秒杀页.css" rel="stylesheet" />
+
+    <!-- 插入头部 -->
+    <link rel="stylesheet" href="../head/head.css">
+    <script type="text/javascript" src="../head/header.js"></script>
+
+    <!-- 秒杀页选项卡行头滑动效果 -->
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".miaoshaye2-1-1").click(function () {
+          
+          let Ori = $('#miaoshaye ul').css('marginLeft')
+        
+          let ori = Number(Ori.substr(0, Ori.length - 2))
+          if(ori  > -890) {
+            $("#miaoshaye ul").css("marginLeft", ori - 160 + "px")
+            // 输出观察验证一下
+            console.log($('#miaoshaye ul').css('marginLeft'), 'ori', ori);
+          }
+          else {
+            $("#miaoshaye ul").css("marginLeft", "-890px")
+          }
+        })
+        $(".miaoshaye2-1-3").click(function () {
+          
+          let Ori = $('#miaoshaye ul').css('marginLeft')
+          let ori = Number(Ori.substr(0, Ori.length - 2))
+          if(ori < 0) {
+            $("#miaoshaye ul").css("marginLeft", ori + 160 + "px")
+            console.log($('#miaoshaye ul').css('marginLeft'), 'ori', ori);
+          }
+          else {
+            $("#miaoshaye ul").css("marginLeft", 0 + "px")
+          }
+          
+        })
+      })
+    </script>
+    <!-- 秒杀页选项卡显示内容效果 -->
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        $(function(){
+            //页面加载完毕，让第一个选项卡被选中
+            $('.miaoshaye2-1-2>ul>li:first').addClass('active');
+            $('#ms-content>.ms-content-item:first').css('display','block');
+            
+            //当鼠标点击某个选项卡元素时候，给他添加类选择器.active
+            $('.miaoshaye2-1-2>ul>li').click(function(){
+                
+                $(this).addClass('active');
+                //移除其他元素的类选择器.active
+                $(this).siblings('li').removeClass('active');
+
+                //获取当前选项卡所在的索引
+                var idx=$(this).index();
+                //找到选项卡对应的内容div并呈现
+                var div=$('#ms-content>.ms-content-item:eq('+idx+')');
+                div.css('display','block');
+               
+                //隐藏其他选项卡下的内容div
+                div.siblings('div').css('display','none');
+            });
+
+        })
+    </script>
+    <!-- 倒计时功能 -->
+     <script src="jquery-1.8.3.min.js"></script>
+     <script>
+        // 早10点场结束
+       $(document).ready(
+        function(){
+             //1、获取元素
+        var hour=document.querySelector('.hour');
+                var minute=document.querySelector('.minute');
+                var second=document.querySelector('.second');
+                var inputTime=+new Date('2022-9-19 20:00:00');
+                countDown();
+                //2、开启定时器
+                setInterval(countDown,1000);
+                //3、倒计时-时分秒函数
+                function countDown(){
+                var nowTime=+new Date(); 
+                var times=(inputTime-nowTime)/1000; 
+                var h=parseInt(times/60/60%24);
+                h=h<10?'0'+h:h;
+                hour.innerHTML=h;//更改div里面的内容 把h给获取元素hour的内容
+                var m=parseInt(times/60%60);
+                m=m<10?'0'+m:m;
+                minute.innerHTML=m;//同上
+                var s=parseInt(times%60);
+                s=s<10?'0'+s:s;
+                second.innerHTML=s;//同上
+                }
+                 
+        }
+       )  
+    //    晚八点场开始
+       $(document).ready(
+        function(){
+             //1、获取元素
+        var hour=document.querySelector('.hour1');
+                var minute=document.querySelector('.minute1');
+                var second=document.querySelector('.second1');
+                var inputTime=+new Date('2022-9-19 20:00:00');
+                countDown();
+                //2、开启定时器
+                setInterval(countDown,1000);
+                //3、倒计时-时分秒函数
+                function countDown(){
+                var nowTime=+new Date(); 
+                var times=(inputTime-nowTime)/1000; 
+                var h=parseInt(times/60/60%24);
+                h=h<10?'0'+h:h;
+                hour.innerHTML=h;//更改div里面的内容 把h给获取元素hour的内容
+                var m=parseInt(times/60%60);
+                m=m<10?'0'+m:m;
+                minute.innerHTML=m;//同上
+                var s=parseInt(times%60);
+                s=s<10?'0'+s:s;
+                second.innerHTML=s;//同上
+                }
+                 
+        }
+       )  
+    //    早十点场开始
+       $(document).ready(
+        function(){
+             //1、获取元素
+        var hour=document.querySelector('.hour2');
+                var minute=document.querySelector('.minute2');
+                var second=document.querySelector('.second2');
+                var inputTime=+new Date('2022-9-19 10:00:00');
+                countDown();
+                //2、开启定时器
+                setInterval(countDown,1000);
+                //3、倒计时-时分秒函数
+                function countDown(){
+                var nowTime=+new Date(); 
+                var times=(inputTime-nowTime)/1000; 
+                var h=parseInt(times/60/60%24);
+                h=h<10?'0'+h:h;
+                hour.innerHTML=h;
+                var m=parseInt(times/60%60);
+                m=m<10?'0'+m:m;
+                minute.innerHTML=m;//同上
+                var s=parseInt(times%60);
+                s=s<10?'0'+s:s;
+                second.innerHTML=s;//同上
+                }
+                 
+        }
+       )  
+     </script>
+     <style>
+        
+     </style>
+</head>
+<body>
+   
+   
+
+
+
+
+    <div id="miaoshaye"><!-- 秒杀页面 -->
+
+
+        <div id="miaoshaye1"><!-- 秒杀页面第一行 -->
+            <img src="img/秒杀页第一行.png" alt="">
+        </div>
+
+        <div class="tab"><!-- 秒杀选项卡整体最外面的框 -->
+            <div class="miaoshaye2"> <!-- 秒杀选项卡行头最外面的框 --> 
+                <div class="miaoshaye2-1"><!-- 秒杀选项卡行头放按钮与内容的框 -->
+                    <!-- 左按钮 -->
+                    <div class="miaoshaye2-1-1">
+                        <span class="huandong-btn"><</span>
+                    </div>
+                    <!-- 滑动移动 -->
+                    <div class="miaoshaye2-1-2">
+                        <ul>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">17日20：00</span>
+                                    <span class="zuangtai">已结束</span>
+                                </div>
+                             
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">18日10：00</span>
+                                    <span class="zuangtai">抢购中</span>
+                                </div>
+                                
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">18日20：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                 <div>
+                                    <span class="t-data">19日10：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">19日20：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">20日10：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">20日20：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">21日10：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">21日20：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">22日10：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">22日20：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                            <li class="ms-top">
+                                <div>
+                                    <span class="t-data">22日10：00</span>
+                                    <span class="zuangtai">即将开始</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 右按钮 -->
+                    <div class="miaoshaye2-1-3">
+                        <span class="huandong-btn">></span>
+                    </div>
+
+                </div>
+            </div>
+
+
+                    <!-- 选项卡显示内容 -->
+                <div id="ms-content">
+                    <!-- 选项卡1-->
+                    <div class="ms-content-item">
+                        <div class="qianggou-logo">
+                            <img  src="img/秒杀图标.png" alt="">
+                        </div>
+                        <div class="product-list">
+
+                                    <!-- 第一张产品图 -->
+                                    <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-1-1.png" alt="">
+                                            </div>
+
+                                            <div  class="state-label">
+                                        已结束
+                                    </div>
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">vivo 33W 闪充充电器 白色</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>58</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>99</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">原价购买</div>
+                                        </a>
+                                    </div>
+
+                                      <!-- 第二张产品图-->
+
+                                    <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-1-2.png" alt="">
+                                            </div>
+
+                                                <div  class="state-label">
+                                                    已结束
+                                                </div>
+                                            <div  class="cf product-info-wrapper">
+                                                <div  class="product-info">
+                                                    <div  class="title">vivo 2A Type-C手游数据线 蓝黑</div>
+                                                    <div  class="sellingPoint">限时特惠</div>
+                                                    <div  class="price">
+                                                        <span  class="sale-price">
+                                                            <span  class="yuan">¥</span>28</span>
+                                                            <span  class="market-price">
+                                                                <span  class="yuan">¥</span>59</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">原价购买</div>
+                                        </a>
+                                    </div>
+                                     <!-- 第三张产品图-->
+
+                                     <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-1-3.png" alt="">
+                                            </div>
+
+                                                <div  class="state-label">
+                                                    已结束
+                                                </div>
+                                            <div  class="cf product-info-wrapper">
+                                                <div  class="product-info">
+                                                    <div  class="title">iQOO 5A Type-C胶囊闪充数据线</div>
+                                                    <div  class="sellingPoint">限时特惠</div>
+                                                    <div  class="price">
+                                                        <span  class="sale-price">
+                                                            <span  class="yuan">¥</span>38</span>
+                                                            <span  class="market-price">
+                                                                <span  class="yuan">¥</span>59</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">原价购买</div>
+                                        </a>
+                                    </div>
+                                     <!-- 第四张产品图-->
+
+                                     <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-1-4.png" alt="">
+                                            </div>
+                                                
+                                                <div  class="state-label">
+                                                    已结束
+                                                </div>
+                                            <div  class="cf product-info-wrapper">
+                                                <div  class="product-info">
+                                                    <div  class="title">vivo S12 原装保护壳 透明</div>
+                                                    <div  class="sellingPoint">限时特惠</div>
+                                                    <div  class="price">
+                                                        <span  class="sale-price">
+                                                            <span  class="yuan">¥</span>5</span>
+                                                            <span  class="market-price">
+                                                                <span  class="yuan">¥</span>19</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">原价购买</div>
+                                        </a>
+                                    </div>
+
+                                     <!-- 第五张产品图-->
+
+                                     <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-1-5.png" alt="">
+                                            </div>
+                                                
+                                                <div  class="state-label">
+                                                    已结束
+                                                </div>
+                                            <div  class="cf product-info-wrapper">
+                                                <div  class="product-info">
+                                                    <div  class="title">vivo 2A Type-C手游数据线 蓝黑</div>
+                                                    <div  class="sellingPoint">限时特惠</div>
+                                                    <div  class="price">
+                                                        <span  class="sale-price">
+                                                            <span  class="yuan">¥</span>9</span>
+                                                            <span  class="market-price">
+                                                                <span  class="yuan">¥</span>49</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">原价购买</div>
+                                        </a>
+                                    </div>
+                                     <!-- 第六张产品图-->
+
+                                     <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-1-6.png" alt="">
+                                            </div>
+                                               
+                                                <div  class="state-label">
+                                                    已结束
+                                                </div>
+                                            <div  class="cf product-info-wrapper">
+                                                <div  class="product-info">
+                                                    <div  class="title">蓝黑TITA 临时停车牌 银色</div>
+                                                    <div  class="sellingPoint">限时特惠</div>
+                                                    <div  class="price">
+                                                        <span  class="sale-price">
+                                                            <span  class="yuan">¥</span>29</span>
+                                                            <span  class="market-price">
+                                                                <span  class="yuan">¥</span>39</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">原价购买</div>
+                                        </a>
+                                    </div>
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+                    <!-- 选项卡2 -->
+                    <div class="ms-content-item">
+                        <div class="qianggou-logo">
+                            <img  src="img/秒杀图标.png" alt="">
+                            
+                            <p class="count-down ">
+                                <span class="text1"> 距离促销结束 </span>
+                                <span class="v-count-down"><span>
+                                <span class="bolder hour">  </span>
+                                <em class="text1 ">时</em>
+                                <span class="bolder minute">  </span>
+                                <em class="risk ">分</em><span>
+                               <span class="bolder second">  </span>
+                               <em class="text1 ">秒</em>
+                               </span></span>
+                               </span></span>
+                            </p>
+                        </div>
+
+
+
+                                    <div class="product-list">
+                                                       <!-- 第一张产品图 -->
+                                                         <div  class="sec-prd-item">
+                                                             <a  href="javascript:;" class="sec-anchor">
+                        
+                                                              <div  class="new-label">
+                                                                  <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                                              </div>
+                                                             <div  class="img">
+                                                                 <img  src="img/ms-2-1.png" alt="">
+                                                              </div>
+                        
+
+                                                        <div  class="cf product-info-wrapper">
+                                                                <div  class="product-info">
+                                                                    <div  class="title">vivo 2A USB数据线</div>
+                                                                    <div  class="sellingPoint">限时特惠</div>
+                                                                    <div  class="price">
+                                                                        <span  class="sale-price">
+                                                                            <span  class="yuan">¥</span>9</span>
+                                                                            <span  class="market-price">
+                                                                             <span  class="yuan">¥</span>19</span>
+                                                                          </div>
+                                                                          <div  class="price-bottom state-3">点击查看商品</div>
+                                                                       </div>
+                                                                  </div>
+                                                                  <div  class="product-btn btn-link type-2">立即抢购</div>
+                                                         </a>
+                                            </div>
+                        
+                                    <!-- 第二张产品图 -->
+                                    <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-2.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">iQOO 极风散热背夹 Pro</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>158</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>199</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">立即抢购</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第三张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-3.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">vivo 33W 闪充充电器 白色</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>19</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>39</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">立即抢购</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第四张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-4.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">vivo S15 原装保护壳 透明</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>9</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>19</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">立即抢购</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第五张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-5.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">绿联转接头 Type-C to USB</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>16.9</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>19.9</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">立即抢购</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第六张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-6.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title"> vivo Y30/Y30标准版 原装保护壳 透明</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>5</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>19</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">立即抢购</div>
+                                        </a>
+                                    </div>
+                </div>
+
+        <!-- 选项卡3 -->
+                    </div>
+                    <div class="ms-content-item">
+                        <div class="qianggou-logo">
+                            <img  src="img/秒杀图标.png" alt="">
+                            
+                            <p class="count-down ">
+                                <span class="text1"> 距离促销开始 </span>
+                                <span class="v-count-down"><span>
+                                <span class="bolder hour1">  </span>
+                                <em class="text1 ">时</em>
+                                <span class="bolder minute1">  </span>
+                                <em class="risk ">分</em><span>
+                               <span class="bolder second1">  </span>
+                               <em class="text1 ">秒</em>
+                               </span></span>
+                               </span></span>
+                            </p>
+                        </div>
+                        <div class="product-list">
+
+                                <!-- 第一张产品图 -->
+                                <div  class="sec-prd-item">
+                                    <a  href="javascript:;" class="sec-anchor">
+
+                                        <div  class="new-label">
+                                            <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                        </div>
+                                        <div  class="img">
+                                            <img  src="img/ms-3-1.png" alt="">
+                                        </div>
+
+                                       
+                                <div  class="cf product-info-wrapper">
+                                    <div  class="product-info">
+                                        <div  class="title">vivo 33W 闪充充电器 白色</div>
+                                        <div  class="sellingPoint">限时特惠</div>
+                                        <div  class="price">
+                                            <span  class="sale-price">
+                                                <span  class="yuan">¥</span>38</span>
+                                                <span  class="market-price">
+                                                    <span  class="yuan">¥</span>99</span>
+                                                </div>
+                                                <div  class="price-bottom state-3">点击查看商品</div>
+                                            </div>
+                                        </div>
+                                        <div  class="product-btn btn-link type-2">设置提醒</div>
+                                    </a>
+                                </div>
+          
+                                
+                                <!-- 第二张产品图 -->
+                                <div  class="sec-prd-item">
+                                    <a  href="javascript:;" class="sec-anchor">
+
+                                        <div  class="new-label">
+                                            <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                        </div>
+                                        <div  class="img">
+                                            <img  src="img/ms-3-2.png" alt="">
+                                        </div>
+
+                                       
+                                <div  class="cf product-info-wrapper">
+                                    <div  class="product-info">
+                                        <div  class="title">vivo 3.5mm接口影音耳机 冰川白</div>
+                                        <div  class="sellingPoint">限时特惠</div>
+                                        <div  class="price">
+                                            <span  class="sale-price">
+                                                <span  class="yuan">¥</span>78</span>
+                                                <span  class="market-price">
+                                                    <span  class="yuan">¥</span>129</span>
+                                                </div>
+                                                <div  class="price-bottom state-3">点击查看商品</div>
+                                            </div>
+                                        </div>
+                                        <div  class="product-btn btn-link type-2">设置提醒</div>
+                                    </a>
+                                </div>
+                                
+                                <!-- 第三张产品图 -->
+                                <div  class="sec-prd-item">
+                                    <a  href="javascript:;" class="sec-anchor">
+
+                                        <div  class="new-label">
+                                            <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                        </div>
+                                        <div  class="img">g
+                                            <img  src="img/ms-3-3.png" alt="">
+                                        </div>
+
+                                       
+                                <div  class="cf product-info-wrapper">
+                                    <div  class="product-info">
+                                        <div  class="title">ROCK 桌面手机支架</div>
+                                        <div  class="sellingPoint">限时特惠</div>
+                                        <div  class="price">
+                                            <span  class="sale-price">
+                                                <span  class="yuan">¥</span>15</span>
+                                                <span  class="market-price">
+                                                    <span  class="yuan">¥</span>19</span>
+                                                </div>
+                                                <div  class="price-bottom state-3">点击查看商品</div>
+                                            </div>
+                                        </div>
+                                        <div  class="product-btn btn-link type-2">设置提醒</div>
+                                    </a>
+                                </div>
+                                
+                                <!-- 第四张产品图 -->
+                                <div  class="sec-prd-item">
+                                    <a  href="javascript:;" class="sec-anchor">
+
+                                        <div  class="new-label">
+                                            <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                        </div>
+                                        <div  class="img">
+                                            <img  src="img/ms-3-4.png" alt="">
+                                        </div>
+
+                                       
+                                <div  class="cf product-info-wrapper">
+                                    <div  class="product-info">
+                                        <div  class="title">vivo 1.2m L型 Type-C闪充编织线 黑黄</div>
+                                        <div  class="sellingPoint">限时特惠</div>
+                                        <div  class="price">
+                                            <span  class="sale-price">
+                                                <span  class="yuan">¥</span>28</span>
+                                                <span  class="market-price">
+                                                    <span  class="yuan">¥</span>49</span>
+                                                </div>
+                                                <div  class="price-bottom state-3">点击查看商品</div>
+                                            </div>
+                                        </div>
+                                        <div  class="product-btn btn-link type-2">设置提醒</div>
+                                    </a>
+                                </div>
+                                
+                                <!-- 第五张产品图 -->
+                                <div  class="sec-prd-item">
+                                    <a  href="javascript:;" class="sec-anchor">
+
+                                        <div  class="new-label">
+                                            <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                        </div>
+                                        <div  class="img">
+                                            <img  src="img/ms-3-5.png" alt="">
+                                        </div>
+
+                                       
+                                <div  class="cf product-info-wrapper">
+                                    <div  class="product-info">
+                                        <div  class="title">浴室多功能清洁剂 网易 500g</div>
+                                        <div  class="sellingPoint">限时特惠</div>
+                                        <div  class="price">
+                                            <span  class="sale-price">
+                                                <span  class="yuan">¥</span>12.9</span>
+                                                <span  class="market-price">
+                                                    <span  class="yuan">¥</span>14.9</span>
+                                                </div>
+                                                <div  class="price-bottom state-3">点击查看商品</div>
+                                            </div>
+                                        </div>
+                                        <div  class="product-btn btn-link type-2">设置提醒</div>
+                                    </a>
+                                </div>
+                                
+                                <!-- 第六张产品图 -->
+                                <div  class="sec-prd-item">
+                                    <a  href="javascript:;" class="sec-anchor">
+
+                                        <div  class="new-label">
+                                            <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                        </div>
+                                        <div  class="img">
+                                            <img  src="img/ms-3-6.png" alt="">
+                                        </div>
+
+                                       
+                                <div  class="cf product-info-wrapper">
+                                    <div  class="product-info">
+                                        <div  class="title">vivo X70 Pro 原装保护膜 透明</div>
+                                        <div  class="sellingPoint">限时特惠</div>
+                                        <div  class="price">
+                                            <span  class="sale-price">
+                                                <span  class="yuan">¥</span>9</span>
+                                                <span  class="market-price">
+                                                    <span  class="yuan">¥</span>29</span>
+                                                </div>
+                                                <div  class="price-bottom state-3">点击查看商品</div>
+                                            </div>
+                                        </div>
+                                        <div  class="product-btn btn-link type-2">设置提醒</div>
+                                    </a>
+                                </div>
+
+
+
+
+                        </div>
+                    </div>
+                    <div class="ms-content-item">
+                        <div class="qianggou-logo">
+                            <img  src="img/秒杀图标.png" alt="">
+                            <p class="count-down ">
+                                <span class="text1"> 距离促销开始 </span>
+                                <span class="v-count-down"><span>
+                                <span class="bolder hour2">  </span>
+                                <em class="text1 ">时</em>
+                                <span class="bolder minute2">  </span>
+                                <em class="risk ">分</em><span>
+                               <span class="bolder second2">  </span>
+                               <em class="text1 ">秒</em>
+                               </span></span>
+                               </span></span>
+                            </p>
+                        </div>
+
+                                                <div class="product-list">
+                                                 <!-- 第一张产品图 -->
+                                                         <div  class="sec-prd-item">
+                                                             <a  href="javascript:;" class="sec-anchor">
+                        
+                                                              <div  class="new-label">
+                                                                  <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                                              </div>
+                                                             <div  class="img">
+                                                                 <img  src="img/ms-2-1.png" alt="">
+                                                              </div>
+                        
+
+                                                        <div  class="cf product-info-wrapper">
+                                                                <div  class="product-info">
+                                                                    <div  class="title">vivo 2A USB数据线</div>
+                                                                    <div  class="sellingPoint">限时特惠</div>
+                                                                    <div  class="price">
+                                                                        <span  class="sale-price">
+                                                                            <span  class="yuan">¥</span>9</span>
+                                                                            <span  class="market-price">
+                                                                             <span  class="yuan">¥</span>19</span>
+                                                                          </div>
+                                                                          <div  class="price-bottom state-3">点击查看商品</div>
+                                                                       </div>
+                                                                  </div>
+                                                                  <div  class="product-btn btn-link type-2">设置提醒</div>
+                                                         </a>
+                                            </div>
+                        
+                                    <!-- 第二张产品图 -->
+                                    <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-2.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">iQOO 极风散热背夹 Pro</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>158</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>199</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">设置提醒</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第三张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-3.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">vivo 33W 闪充充电器 白色</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>19</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>39</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">设置提醒</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第四张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-4.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">vivo S15 原装保护壳 透明</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>9</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>19</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">设置提醒</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第五张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-5.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title">绿联转接头 Type-C to USB</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>16.9</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>19.9</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">设置提醒</div>
+                                        </a>
+                                    </div>
+                                       <!-- 第六张产品图 -->
+                                       <div  class="sec-prd-item">
+                                        <a  href="javascript:;" class="sec-anchor">
+
+                                            <div  class="new-label">
+                                                <img  src="https://vivoshop-vivofs.vivo.com.cn/vivoshop/actcorner/20211206/06d52714f7fdb37afa2fafbeb578c06f.png_w100-h100.png" alt="">
+                                            </div>
+                                            <div  class="img">
+                                                <img  src="img/ms-2-6.png" alt="">
+                                            </div>
+
+                                           
+                                    <div  class="cf product-info-wrapper">
+                                        <div  class="product-info">
+                                            <div  class="title"> vivo Y30/Y30标准版 原装保护壳 透明</div>
+                                            <div  class="sellingPoint">限时特惠</div>
+                                            <div  class="price">
+                                                <span  class="sale-price">
+                                                    <span  class="yuan">¥</span>5</span>
+                                                    <span  class="market-price">
+                                                        <span  class="yuan">¥</span>19</span>
+                                                    </div>
+                                                    <div  class="price-bottom state-3">点击查看商品</div>
+                                                </div>
+                                            </div>
+                                            <div  class="product-btn btn-link type-2">设置提醒</div>
+                                        </a>
+                                    </div>
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+        </div>
+    </div>
+
+    <object type="text/x-scriptlet" data="../footer/footer.html" width=100% height=800px></object>
+
+</body>
+</html>
+

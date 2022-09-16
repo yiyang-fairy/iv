@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>手机保养</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="44" height="44"></rect>
+    </defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC服务1920" transform="translate(-1323.000000, -1480.000000)">
+            <g id="手机保养" transform="translate(1323.000000, 1480.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="矩形"></g>
+                <g id="编组-24" mask="url(#mask-2)">
+                    <g transform="translate(11.000000, 0.000000)">
+                        <rect id="形状结合备份" stroke="#575C66" stroke-width="2" fill="none" x="0" y="12" width="22" height="26" rx="1"></rect>
+                        <circle id="椭圆形" stroke="none" fill="#575C66" fill-rule="evenodd" cx="4.5" cy="16.5" r="1.5"></circle>
+                        <path d="M26,10.49927 L22.8155472,11.4326321 C22.7095494,11.4637001 22.5984358,11.4029574 22.5673679,11.2969597 C22.5566024,11.26023 22.5566024,11.2211825 22.5673679,11.1844528 L23.50073,8 L23.50073,8 L22.5673679,4.81554718 C22.5362999,4.70954943 22.5970426,4.59843576 22.7030403,4.56736785 C22.73977,4.55660239 22.7788175,4.55660239 22.8155472,4.56736785 L26,5.50073 L26,5.50073 L29.1844528,4.56736785 C29.2904506,4.53629994 29.4015642,4.59704258 29.4326321,4.70304033 C29.4433976,4.73977003 29.4433976,4.77881748 29.4326321,4.81554718 L28.49927,8 L28.49927,8 L29.4326321,11.1844528 C29.4637001,11.2904506 29.4029574,11.4015642 29.2969597,11.4326321 C29.26023,11.4433976 29.2211825,11.4433976 29.1844528,11.4326321 L26,10.49927 L26,10.49927 Z" id="星形" stroke="#575C66" stroke-width="2" fill="none" transform="translate(26.000000, 8.000000) rotate(45.000000) translate(-26.000000, -8.000000) "></path>
+                    </g>
+                </g>
+                <rect id="矩形" mask="url(#mask-2)" x="0" y="0" width="44" height="44"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

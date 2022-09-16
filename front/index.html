@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="css/vivo首页.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/图标.css">
+    <link href="css/浮标.css" rel="stylesheet" />
+    <!-- <link rel="import" href="head/head.html" id="page1"/> -->
+    <!-- 插入头部 -->
+    <link rel="stylesheet" href="head/head.css">
+    <script type="text/javascript" src="head/header.js"></script>
+
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <!-- 轮播图 -->
+    <script>
+        //定义全局变量和定时器
+
+        var i = 0;
+        var timer;
+
+        $(document).ready(function () {
+            //用jquery方法设置第一张图片显示，其余隐藏 
+            
+            $('.ig').eq(0).show().siblings('.ig').hide();
+            //调用showTime()函数（轮播函数） 
+            showTime();
+            // 当鼠标经过下面的灰点时，触发两个事件（鼠标悬停和鼠标离开）
+            $('.tab').hover(function () {
+                //获取当前i的值，并显示，同时清除定时器
+                i = $(this).index();
+                Show();
+                clearInterval(timer);
+            }, function () {
+                showTime();
+            });
+        });
+
+        //创建一个showTime函数
+        function showTime() {
+            //定时器
+            // setInterval,每隔一定时间就调用函数
+            timer = setInterval(function () {
+                //调用一个Show()函数       
+                Show();
+                i++;
+                
+                if (i == 5) {
+                    i = 0;
+                }
+            }, 2000);
+        }
+        //创建一个Show函数  
+        function Show() {
+             
+            $('.ig').eq(i).fadeIn(300).siblings('.ig').fadeOut(300);
+            $('.tab').eq(i).addClass('bg').siblings('.tab').removeClass('bg');
+        }
+    </script>
+
+    <script type="text/javascript" src="jquery-1.8.3.min.js">
+
+    </script>
+
+
+    </script>
+
+    <script src="jquery-1.8.3.min.js"></script>
+    <!-- 倒计时 -->
+    <script>
+        $(document).ready(function () {
+            //1、获取元素
+            var hour = document.querySelector('.hour');
+            var minute = document.querySelector('.minute');
+            var second = document.querySelector('.second');
+            var inputTime = +new Date('2022-9-18 20:00:00'); //倒计时的结束时间
+            countDown(); //先调用一次这个函数 防止第一次刷新页面有空白
+            //2、开启定时器
+            setInterval(countDown, 1000); //每一秒钟调用一次函数
+            //3、倒计时-时分秒函数
+            function countDown() {
+                var nowTime = +new Date(); //返回的是当前时间的总的毫秒数
+                var times = (inputTime - nowTime) / 1000; 
+                var h = parseInt(times / 60 / 60 % 24);
+                h = h < 10 ? '0' + h : h; //判断数值小于10的情况 
+                hour.innerHTML = h; 
+                var m = parseInt(times / 60 % 60);
+                
+                m = m < 10 ? '0' + m : m;
+                minute.innerHTML = m; //同上
+                var s = parseInt(times % 60);
+                s = s < 10 ? '0' + s : s;
+                second.innerHTML = s; //同上
+            }
+
+        })
+    </script>
+
+    <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+    <!-- 滑动行 -->
+    <script>
+        // 秒杀行滑动
+        $(document).ready(function () {
+
+
+            $(".button-1").click(function () {
+
+                let Ori = $('.miaosha-1-ul').css('marginLeft')
+                let ori = Number(Ori.substr(0, Ori.length - 2))
+                if (ori > -2380) {
+                    $(".miaosha-1-ul").css("marginLeft", ori - 1190 + "px")
+                    console.log($('.miaosha-1-ul').css('marginLeft'), 'ori', ori);
+                } else {
+                    $(".miaosha-1-ul").css("marginLeft", "-2380px")
+                }
+            })
+
+
+            // let right = ori + 150
+            $(".button-2").click(function () {
+
+                let Ori = $('.miaosha-1-ul').css('marginLeft')
+                let ori = Number(Ori.substr(0, Ori.length - 2))
+                if (ori < 0) {
+                    $(".miaosha-1-ul").css("marginLeft", ori + 1190 + "px")
+                    console.log($('.miaosha-1-ul').css('marginLeft'), 'ori', ori);
+                } else {
+                    $(".miaosha-1-ul").css("marginLeft", 0 + "px")
+                }
+
+            })
+            //轮播图左侧li点击跳转到商品分类页面
+            $("#box1-1 li").click(function () {
+                window.open('/Category/category.html')
+              })
+
+
+            //秒杀商品点击跳转秒杀页面
+            $('.miaosha-1-ul .miaosha-1-li').click(function() {
+                window.open('/Seckill/seckill.html')
+            })
+
+            $('#shouji-list li').click(function () {
+                window.open('/Detail/detail.html')
+              })
+
+        })
+    </script>
+
+
+
+</head>
+
+<body>
+    <div id="zong">
+        <!-- 第一行 -->
+        <div id="box1">
+            <p id="igs">
+
+                <a class="ig" href="/Detail/detail.html"><img src="img/首页1 (2).jpg" /></a>
+
+                <a class="ig" href="/Detail/detail.html"><img src="img/首页2.jpg" /></a>
+
+                <a class="ig" href="/Detail/detail.html"><img src="img/首页3.jpg" /></a>
+
+                <a class="ig" href="/Detail/detail.html"><img src="img/首页4.jpg" /></a>
+
+                <a class="ig" href="/Detail/detail.html"><img src="img/首页5.png" /></a>
+
+
+            </p>
+            <div id="box1-1">
+                <ul>
+                    <li>
+                        <span class="menu-l">手机</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 全部手机> </a>
+                                <p>手机</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1650247358707_312x100.png&quot;);">
+                                            vivo X </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1652407819098_312x100.png&quot;);">
+                                            vivo S </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1654154209468_312x100.png&quot;);">
+                                            vivo T </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660112096038_312x100.png&quot;);">
+                                            vivo Y </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1658914163038_312x100.png&quot;);">
+                                            iQOO 旗舰 </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1651914541893_312x100.png&quot;);">
+                                            iQOO Neo </a>
+                                    </li>
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/77/10006277_1626332031437_250x250.png.webp">
+                                            <span>vivo S9</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/22/10006322_1616384005995_250x250.png.webp">
+                                            <span>vivo X60t</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/71/10007671_1661237869624_250x250.png.webp">
+                                            <span>iQOO Z6x</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/70/10007670_1661237610116_250x250.png.webp">
+                                            <span>iQOO Z6</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/57/10007657_1660112852066_250x250.png.webp">
+                                            <span>vivo Y77e</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/47/10007647_1661415286130_250x250.png.webp">
+                                            <span>vivo Y32t</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="menu-l">平板手表</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 全部平板手表> </a>
+                                <p>平板手表</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660639759079_312x100.png&quot;);">
+                                            平板专区 </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660636850506_312x100.png&quot;);">
+                                            智能手表 </a>
+                                    </li>
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/13/10005713_1600136557273_250x250.png.webp">
+                                            <span>vivo WATCH</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/37/10007237_1649737569359_250x250.png.webp">
+                                            <span>vivo Pad平板电脑</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt="" d
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/10007073_1640069349502_250x250.png.webp">
+                                            <span>vivo WATCH 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/76/10007076_1640083017107_250x250.png.webp">
+                                            <span>vivo WATCH 2 手表充电底座</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/00/10007300_1649590535738_250x250.png.webp">
+                                            <span>vivo Pad智能双面夹</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/99/10007299_1649590051179_250x250.png.webp">
+                                            <span>vivo Pad触控笔</span>
+                                        </a>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+
+                        </div>
+                    </li>
+                    <li>
+                        <span class="menu-l"> 手机充电</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 全部手机充电> </a>
+                                <p>手机充电</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640118490_312x100.png&quot;);">
+                                            数据线 </a>
+
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640156866_312x100.png&quot;);">
+                                            充电器 </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640186423_312x100.png&quot;);">
+                                            移动电源 </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640254771_312x100.png&quot;);">
+                                            插座插线板 </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640289271_312x100.png&quot;);">
+                                            车载配件 </a>
+                                    </li>
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/10007728_1662369144259_250x250.png.webp">
+                                            <span>iQOO 10A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/88/10007688_1661148514266_250x250.png.webp">
+                                            <span>iQOO 200W Type-C to Type-C 氮化镓闪充套装</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/18/10007618_1659422638404_250x250.png.webp">
+                                            <span>vivo 6A Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/21/10007621_1659422795091_250x250.png.webp">
+                                            <span>iQOO 6A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/16/10007616_1659926998754_250x250.png.webp">
+                                            <span>vivo 80W Type-C to Type-C 氮化镓闪充套装</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/17/10007617_1658229391922_250x250.png.webp">
+                                            <span>vivo 66W 闪充套装</span>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="menu-l">手机配件</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 全部手机配件> </a>
+                                <p>手机配件</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640510273_312x100.png&quot;);">
+                                            保护膜 </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640357777_312x100.png&quot;);">
+                                            保护壳 </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640532467_312x100.png&quot;);">
+                                            通用配件 </a>
+                                    </li>
+
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/10007728_1662369144259_250x250.png.webp">
+                                            <span>iQOO 10A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/50/10007650_1659680329347_250x250.png.webp">
+                                            <span>X Fold 原装保护膜（主屏）透明</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/31/10007631_1659000279689_250x250.png.webp">
+                                            <span>vivo S15 / iQOO Neo6 SE 原装保护膜 透明</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/14/10007614_1658200464295_250x250.png.webp">
+                                            <span>iQOO 10 Pro 素皮保护壳</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/12/10007612_1658198000515_250x250.png.webp">
+                                            <span>iQOO 10 素皮保护壳</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/70/10006870_1641538237972_250x250.png.webp">
+                                            <span>iQOO 8/8 Pro 原装保护壳</span>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="menu-l">音乐设备</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 全部音乐设备> </a>
+                                <p>音乐设备</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="https://shop.vivo.com.cn/product/list-360"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640594576_312x100.png&quot;);">
+                                            有线耳机 </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://shop.vivo.com.cn/product/list-580"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640657620_312x100.png&quot;);">
+                                            蓝牙耳机 </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="https://shop.vivo.com.cn/product/list-577"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640699518_312x100.png&quot;);">
+                                            音箱 </a>
+                                    </li>
+
+
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/10007728_1662369144259_250x250.png.webp">
+                                            <span>iQOO 10A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/50/10007650_1659680329347_250x250.png.webp">
+                                            <span>X Fold 原装保护膜（主屏）透明</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/31/10007631_1659000279689_250x250.png.webp">
+                                            <span>vivo S15 / iQOO Neo6 SE 原装保护膜 透明</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/14/10007614_1658200464295_250x250.png.webp">
+                                            <span>iQOO 10 Pro 素皮保护壳</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/12/10007612_1658198000515_250x250.png.webp">
+                                            <span>iQOO 10 素皮保护壳</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/70/10006870_1641538237972_250x250.png.webp">
+                                            <span>iQOO 8/8 Pro 原装保护壳</span>
+                                        </a>
+                                    </li>
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="menu-l">智能硬件</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 全部智能硬件> </a>
+                                <p>智能硬件</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640747765_312x100.png&quot;);">
+                                            体脂秤 </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640826422_312x100.png&quot;);">
+                                            智慧家居 </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640907250_312x100.png&quot;);">
+                                            家用电器 </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660640960211_312x100.png&quot;);">
+                                            儿童专区 </a>
+                                    </li>
+
+
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/10007728_1662369144259_250x250.png.webp">
+                                            <span>iQOO 10A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/88/10007688_1661148514266_250x250.png.webp">
+                                            <span>iQOO 200W Type-C to Type-C 氮化镓闪充套装</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/18/10007618_1659422638404_250x250.png.webp">
+                                            <span>vivo 6A Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/21/10007621_1659422795091_250x250.png.webp">
+                                            <span>iQOO 6A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/16/10007616_1659926998754_250x250.png.webp">
+                                            <span>vivo 80W Type-C to Type-C 氮化镓闪充套装</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/17/10007617_1658229391922_250x250.png.webp">
+                                            <span>vivo 66W 闪充套装</span>
+                                        </a>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="menu-l">游戏摄影</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 游戏摄影> </a>
+                                <p>游戏摄影</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="https://shop.vivo.com.cn/product/list-585"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660641099903_312x100.png&quot;);">
+                                            游戏设备 </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="https://shop.vivo.com.cn/product/list-586"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660641177906_312x100.png&quot;);">
+                                            外设产品 </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="https://shop.vivo.com.cn/product/list-362"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660641362583_312x100.png&quot;);">
+                                            摄影配件 </a>
+                                    </li>
+                                    <li>
+
+
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/28/10007728_1662369144259_250x250.png.webp">
+                                            <span>iQOO 10A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/88/10007688_1661148514266_250x250.png.webp">
+                                            <span>iQOO 200W Type-C to Type-C 氮化镓闪充套装</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/18/10007618_1659422638404_250x250.png.webp">
+                                            <span>vivo 6A Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/21/10007621_1659422795091_250x250.png.webp">
+                                            <span>iQOO 6A Type-C to Type-C闪充数据线</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/16/10007616_1659926998754_250x250.png.webp">
+                                            <span>vivo 80W Type-C to Type-C 氮化镓闪充套装</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/17/10007617_1658229391922_250x250.png.webp">
+                                            <span>vivo 66W 闪充套装</span>
+                                        </a>
+                                    </li>
+
+
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="menu-l">日用出行</span> <span class="menu-r">></span>
+                        <div class="yincangcaidan">
+                            <div class="yincangcaidan1">
+                                <a href="#" class="category-all"> 日用出行> </a>
+                                <p>日用出行</p>
+                            </div>
+                            <div>
+                                <ul class="yincangcaidan2">
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660641565010_312x100.png&quot;);">
+                                            个人护理 </a>
+
+
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660642066780_312x100.png&quot;);">
+                                            家居家纺 </a>
+                                    </li>
+                                    <li>
+
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660642180629_312x100.png&quot;);">
+                                            生活日用 </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660642202769_312x100.png&quot;);">
+                                            配饰/箱包 </a>
+                                    </li>
+                                    <li>
+                                        <a href="#"
+                                            style="display: block; background-image: url(&quot;https://shopstatic.vivo.com.cn/vivoshop/commodity/category/1660642223795_312x100.png&quot;);">
+                                            运动健身 </a>
+                                    </li>
+
+
+                                </ul>
+                                <hr>
+                                <ul class="yincangcaidan-product">
+                                    <li>
+
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/13/10005713_1600136557273_250x250.png.webp">
+                                            <span>vivo WATCH</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/37/10007237_1649737569359_250x250.png.webp">
+                                            <span>vivo Pad平板电脑</span>
+                                        </a>
+
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/73/10007073_1640069349502_250x250.png.webp">
+                                            <span>vivo WATCH 2</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/76/10007076_1640083017107_250x250.png.webp">
+                                            <span>vivo WATCH 2 手表充电底座</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/00/10007300_1649590535738_250x250.png.webp">
+                                            <span>vivo Pad智能双面夹</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <img alt=""
+                                                src="https://shopstatic.vivo.com.cn/vivoshop/commodity/99/10007299_1649590051179_250x250.png.webp">
+                                            <span>vivo Pad触控笔</span>
+                                        </a>
+                                    </li>
+
+
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <!-- 第二行 -->
+        <div id="box2">
+            <ul class="box2-ul">
+                <li>
+                    <a target="_blank" href="#">
+                        <img src="img/2-original-1.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="#">
+                        <img src="img/2-original-2.jpg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a target="_blank" href="#">
+                        <img src="img/2-original-3.jpg" alt="">
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+        <!--秒杀场行  -->
+        <div id="miaosha-title">
+            <img src="https://shopstatic.vivo.com.cn/vivoshop/spaweb/static/img/img-vbuy.06e94a77.png" alt=""
+                class="rush-logo">
+            <p class="count-down ">
+                <span class="text1"> 距离促销结束 </span>
+                <span class="v-count-down"><span>
+                        <span class="bolder hour"> </span>
+                        <em class="text1 ">时</em>
+                        <span class="bolder minute"> </span>
+                        <em class="risk ">分</em><span>
+                            <span class="bolder second"> </span>
+                            <em class="text1 ">秒</em>
+                        </span></span>
+                </span></span>
+            </p>
+        </div>
+        <div id="miaosha">
+            <span class="button-1 btn">
+                <</span> <div class="miaosha-1">
+
+                    <div class="miaosha-1-list">
+                        <ul class="miaosha-1-ul">
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms1.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms2.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms3.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms4.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms5.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms6.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms6.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms7.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms8.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms9.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <a href="#">
+                                    <img src="img/ms10.png.webp" alt="">
+                                </a>
+                                <div class="prodinfo">
+                                    <p class="name">iQOO Neo6</p>
+                                    <p class="feature">独显芯片 Pro</p>
+                                    <p class="price rmb-symbol"> 3299.00 </p>
+                                </div>
+                            </li>
+                            <li class="miaosha-1-li">
+                                <h4>下一场</h4>
+                                <p class="time">20:00</p>
+
+
+                                <!-- 链接秒杀页 -->
+                                <a href="秒杀页.html" class="btn">去看看</a>
+                            </li>
+                        </ul>
+                    </div>
+        </div>
+        <span class="button-2 btn">></span>
+    </div>
+
+
+    <!-- 第精品手机行头 -->
+    <div id="info">
+        <p class="subject">精品手机</p>
+        <!-- 产品分类链接（未加入） -->
+        <ul class="more-wrapper">
+            <li>
+                <a target="_blank" href="#"> 平板手表 </a>
+            </li>
+            <li>
+                <a target="_blank" href="#"> 手机充电 </a>
+            </li>
+            <li>
+                <a target="_blank" href="#"> 手机配件 </a>
+            </li>
+            <li>
+                <a target="_blank" href="#"> 更多> </a>
+
+            </li>
+        </ul>
+    </div>
+    <!-- 第精品手机行 -->
+    <div id="jp-zong">
+        <ul id="shouji-list">
+            <li class="shouji-li-1 ">
+                <a href="#">
+                    <img src="img/5-1original.png.webp" alt="">
+                </a>
+            </li>
+            <li class="shouji-li">
+                <a href="#">
+                    <img src="img/5-2.png.webp" alt="">
+                </a>
+                <div class="prodinfo">
+                    <p class="name">iQOO Neo6</p>
+                    <p class="feature">独显芯片 Pro</p>
+                    <p class="price rmb-symbol"> 3299.00 </p>
+                </div>
+            </li>
+            <li class="shouji-li">
+                <a href="#">
+                    <img src="img/5-3.png.webp" alt="">
+                </a>
+                <div class="prodinfo">
+                    <p class="name">vivo Y72t</p>
+                    <p class="feature">6000mAh大电池</p>
+                    <p class="price rmb-symbol"> 1399.00 </p>
+                </div>
+            </li>
+            <li class="shouji-li">
+                <a href="#">
+                    <img src="img/5-4.png.webp" alt="">
+                </a>
+                <div class="prodinfo">
+                    <p class="name">iQOO U5x</p>
+                    <p class="feature">高通骁龙680</p>
+                    <p class="price rmb-symbol"> 899.00 </p>
+                </div>
+            </li>
+            <li class="shouji-li">
+                <a href="#">
+                    <img src="img/5-5.png.webp" alt="">
+                </a>
+                <div class="prodinfo">
+                    <p class="name">vivo Y77</p>
+                    <p class="feature">80W双芯闪充</p>
+                    <p class="price rmb-symbol"> 1799.00 </p>
+                </div>
+            </li>
+            <li class="shouji-li">
+                <a href="#">
+                    <img src="img/5-6.png.webp" alt="">
+                </a>
+                <div class="prodinfo">
+                    <p class="name">iQOO 10 Pro</p>
+                    <p class="feature">200W 超快闪充</p>
+                    <p class="price rmb-symbol"> 5499.00 </p>
+                </div>
+            </li>
+            <li class="shouji-li">
+                <a href="#">
+                    <img src="img/5-7.png.webp" alt="">
+                </a>
+                <div class="prodinfo">
+                    <p class="name">vivo Y32</p>
+                    <p class="feature"> 5000mAh大电池</p>
+                    <p class="price rmb-symbol"> 1099.00 </p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    </div>
+
+    <!-- 字体图标 -->
+    <div id="zititubaio">
+        <div>
+            <a href="/shoppingcart/shoppingcart.html">
+                <div class="iconfont">&#xe63f;</div>
+            </a>
+            <div class="xuanfu xuanfu1">
+                购物车
+            </div>
+        </div>
+        <div>
+            <a href="#">
+                <div class="iconfont">&#xe625;</div>
+            </a>
+            <div class="xuanfu xuanfu2">
+                小V客服
+            </div>
+        </div>
+        <div>
+            <a href="#">
+                <div class="iconfont">&#xf0201;</div>
+            </a>
+            <div class="xuanfu xuanfu3">
+                帮助中心
+            </div>
+        </div>
+
+
+    </div>
+
+    <object type="text/x-scriptlet" data="../footer/footer.html" width=100% height=800px></object>
+</body>
+
+</html>

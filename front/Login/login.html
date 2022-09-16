@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./登录.css">
+
+    <script src="jquery-1.8.3.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".erweima").mouseenter(function () {
+                $(".text").show()
+            })
+            $(".erweima").mouseleave(function () {
+                $(".text").hide()
+            })
+        })
+    </script>
+    <script>
+        $(function () {
+
+            $('.box4>.title>.tabs-content>.content-item:last').hide();
+            //页面加载完毕，让第一个选项卡被选中
+            $('.tabs-header>li:first').addClass('active');
+            $('.box4>.title>.tabs-content>.content-item:first').css('display', 'block');
+
+            //当鼠标进入某个选项卡元素时候，给他添加类选择器.active
+            $('.tabs-header>li').mouseenter(function () {
+                //当前选中的元素:this->DOM对象
+                //$(this):JQuery对象
+                //给当前选中元素添加类选择器.active
+                $(this).addClass('active');
+                //移除其他元素的类选择器.active
+                $(this).siblings('li').removeClass('active');
+
+                //获取当前选项卡所在的索引
+                var idx = $(this).index();
+                //找到选项卡对应的内容div并呈现
+                var div = $('.box4>.title>.tabs-content>.content-item:eq(' + idx + ')');
+                div.css('display', 'block');
+                //隐藏其他选项卡下的内容div
+                div.siblings('div').css('display', 'none');
+            });
+
+        })
+    </script>
+</head>
+
+<body>
+    <form action="http://localhost:3000/login-user/Login" method="get">
+        <div class="box1">
+            <div class="box2">
+                <div class="box3">
+                    
+                    <img src="img/登录背景.jpg" >
+                    <div class="logo">
+                        <a href="http://www.vivo.com"></a>
+                    </div>
+                    <div class="denglu">
+                        <div class="erweima">
+                            <img class="tu1" src="img/二维码1.png" alt="">
+
+                        </div>
+                        <div class="text">扫码登录更安全</div>
+                        <div class="box4">
+                            <div class="title">
+                                <ul class="tabs-header">
+                                    <li>短信验证码登录</li>
+                                    <li>帐号密码登录</li>
+
+                                </ul>
+                                <div class="tabs-content">
+                                    <div class="content-item">
+                                        <div class="phone">
+                                            <select name="number" id="number">
+                                                <option value="">中国 +86</option>
+                                                <option value="">印度 +91</option>
+                                                <option value="">印度尼西亚 +62</option>
+
+                                            </select>
+                                            <input type="text" id="userna" name="userna" placeholder="请输入手机号">
+                                        </div>
+                                        <div class="code-box">
+                                            <input type="text" placeholder="请输入验证码">
+                                            <div class="get-code">
+                                                <span>
+                                                    获取验证码
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="auto">
+                                            <input type="checkbox">两周内自动登录
+                                        </div>
+                                        <div class="os-pc-btn">
+                                            <input type="submit" value="登录">
+
+                                        </div>
+                                        <div class="register">
+                                            <a href="注册.html">注册vivo帐号</a>
+                                        </div>
+                                        <div class="others">
+                                            其他方式登录
+                                        </div>
+                                        <div class="photo">
+                                            <span class="iconfont">&#xe65b;</span>
+                                            <span class="iconfont">&#xe636;</span>
+                                            <span class="iconfont">&#xe66b;</span>
+                                        </div>
+                                    </div>
+                                    <div class="content-item">
+                                        <div class="phone">
+                                            <select name="number" id="number">
+                                                <option value="">中国 +86</option>
+                                                <option value="">印度 +91</option>
+                                                <option value="">印度尼西亚 +62</option>
+
+                                            </select>
+                                            <input type="text" id="text" name="username" id="username"
+                                                placeholder="请输入手机号">
+                                        </div>
+                                        <div class="code-box">
+                                            <input type="password" name="userpass" id="userpass" placeholder="请输入密码">
+                                            <div class="get-code">
+
+                                                <span>
+                                                    忘记密码
+                                                </span>
+
+                                            </div>
+                                        </div>
+                                        <div class="auto">
+
+                                            <a href="">邮箱/vivo号登录</a>
+
+                                            <input type="checkbox">两周内自动登录
+                                        </div>
+                                        <div class="os-pc-btn">
+                                            <input type="submit" value="登录">
+                                        </div>
+                                        <div class="register">
+                                            <a href="注册.html">注册vivo帐号</a>
+                                        </div>
+                                        <div class="others">
+                                            其他方式登录
+                                        </div>
+                                        <div class="photo">
+                                            <span class="iconfont">&#xe65b;</span>
+                                            <span class="iconfont">&#xe636;</span>
+                                            <span class="iconfont">&#xe66b;</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="foot">
+                <div class="service">
+                    <a href="">
+                        <img src="img/服务.png" alt="">
+                        <span>在线客服</span>
+                    </a>
+                    <img src="img/服务2.png" alt="">
+                    <span> 400-678-9688(24小时全国服务热线)</span>
+
+                </div>
+                <div class="copyright">
+                    COPYRIGHT ©2011-2022 广东天宸网络科技有限公司 版权所有 保留一切权利 | 隐私政策 | 法律声明 | 粤B2-20080267 | 粤ICP备05100288号
+                </div>
+            </div>
+    </form>
+</body>
+
+</html>

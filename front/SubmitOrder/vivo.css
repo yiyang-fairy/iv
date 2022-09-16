@@ -1,0 +1,702 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+/* 主体部分 */
+
+/* 添加地址盒子 */
+.infoBox {
+    width: 700px;
+    height: 500px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 0 10px rgb(189, 189, 189);
+    display: none;
+}
+
+.infoBox #infoClose {
+    font-size: 20px;
+    text-align: right;
+    margin: -20px 20px 10px 0;
+    cursor: pointer;
+}
+
+.infoBox h2 {
+    font-weight: 200;
+    margin-bottom: 20px;
+}
+
+.infoBox div {
+    margin-top: 30px;
+}
+
+.infoBox div span:nth-child(1) {
+    color: red;
+}
+
+.infoBox div span:nth-child(2) {
+    font-size: 14px;
+    text-align: left;
+}
+
+.infoBox div:nth-child(3) span:nth-child(2) {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.infoBox div input {
+    width: 400px;
+    height: 40px;
+    margin-left: 20px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.infoBox div select {
+    width: 120px;
+    height: 40px;
+    margin-left: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    color: rgb(177, 177, 177);
+}
+
+.checkBox {
+    margin-top: 30px;
+    display: flex;
+    padding-left: 193px;
+}
+
+.checkBox input {
+    width: 20px;
+}
+
+.checkBox a {
+    margin-left: 10px;
+    font-size: 16px !important;
+}
+
+.addressSure {
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+    color: white;
+    border-radius: 50px;
+    background-color: red;
+    margin: 0 auto;
+    margin-top: 80px;
+    cursor: pointer;
+}
+
+.itemP {
+    position: relative;
+    top: 15px;
+    color: red;
+    font-size: 12px;
+    width: 320px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 核对订单信息 */
+
+.firstBox {
+    height: 66px;
+    background-color: white;
+    width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 19px;
+
+}
+
+.firstBox h1 {
+    line-height: 66px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+}
+
+/* 相似部分 */
+.mainBox {
+    width: 1130px;
+    padding: 35px;
+    background-color: white;
+    margin: 0 auto;
+    margin-bottom: 19px;
+}
+
+.mainBox h1 {
+    height: 30px;
+    padding: 5px 0;
+    line-height: 30px;
+    color: #333;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+/* 收货人信息 */
+.secondBox {
+    height: 202px;
+}
+
+.secondBox .showInfoBox {
+    width: 269px;
+    height: 155px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.secondBox .showInfoBox>div {
+    margin-top: 45px;
+    cursor: pointer;
+}
+
+.secondBox div img {
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+.secondBox a {
+    font-size: 14px;
+    display: block;
+    color: black;
+}
+
+/* 电子发票 */
+.thirdBox .invoiceBox {
+    margin-bottom: 20px;
+}
+
+.invoiceBox span {
+    display: inline-block;
+    width: 158px;
+    height: 48px;
+    margin-left: 15px;
+    text-align: center;
+    line-height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.invoiceBox span:nth-child(1) {
+    border: 1px solid black;
+}
+
+
+.riseBox div {
+    margin-bottom: 5px;
+}
+
+.riseBox>div:nth-child(2) {
+    margin-top: 20px;
+}
+
+.riseBox div>span:nth-child(1) {
+    color: red;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+
+.riseBox span:nth-child(2) {
+    font-size: 14px;
+    margin-right: 50px;
+}
+
+.fapiao {
+    position: relative;
+    left: -28px;
+}
+
+.riseBox input {
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    line-height: 18px;
+    background: #fff;
+    padding: 17px 0 13px 10px;
+    width: 483px;
+    font-size: 14px;
+}
+
+.riseBox p {
+    text-align: center;
+}
+
+.riseBox p a {
+    color: #008ddc;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.enterprise {
+    text-align: left !important;
+    margin-top: 20px;
+}
+
+.enterprise>span {
+    color: gray;
+    font-size: 14px;
+    margin-right: 115px;
+}
+
+.moreInfo {
+    text-align: left !important;
+    font-size: 14px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.moreInfoBox {
+    display: none;
+    margin-top: 20px;
+}
+
+.accountBox {
+    margin-bottom: 20px !important;
+}
+
+.accountBox input {
+    margin-left: -14px;
+}
+
+.moreInfo img {
+    width: 25px;
+    position: relative;
+    top: 6px;
+}
+
+/* 确认商品 */
+.fourBox {
+    padding-top: 25px;
+    padding: 25px 0;
+    width: 1200px;
+}
+
+.fourBox h1 {
+    padding: 0 34px 25px 34px;
+}
+
+.products-title {
+    display: flex;
+    height: 64px;
+    line-height: 64px;
+    border-top: 1px solid #f7f7f5;
+    border-bottom: 1px solid #f7f7f5;
+    padding: 0 40px 0 70px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.products-title div:nth-child(1) {
+    width: 430px;
+}
+
+.products-title div:nth-child(2) {
+    width: 168px;
+}
+
+.products-title div:nth-child(3) {
+    width: 123px;
+}
+
+.products-title div:nth-child(4) {
+    width: 123px;
+}
+
+.products-title div:nth-child(5) {
+    width: 123px;
+}
+
+.products-info {
+    padding: 0 40px 0 70px;
+}
+
+.products-top {
+    display: flex;
+    padding: 25px 20px;
+    font-size: 13px;
+}
+
+.sameHeight {
+    line-height: 105px;
+}
+
+.products-top a img {
+    width: 100px;
+}
+
+.products-top div:nth-child(1)>a {
+    display: block;
+    border: 1px solid #ececec;
+}
+
+.products-top div:nth-child(2) {
+    width: 282px;
+    color: #686868;
+    margin-left: 20px;
+}
+
+.products-top div:nth-child(2) a {
+    display: block;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #686868;
+}
+
+.products-top div:nth-child(3) {
+    width: 168px;
+    text-align: center;
+}
+
+.products-top div:nth-child(4) {
+    width: 124px;
+    text-align: center;
+    margin-left: 5px;
+}
+
+.products-top div:nth-child(5) {
+    width: 124px;
+    text-align: center;
+}
+
+.products-top div:nth-child(6) {
+    width: 168px;
+    text-align: center;
+    margin-left: -30px;
+    color: red;
+}
+
+
+.products-bottom {
+    padding: 18px 0 0 18px;
+    margin: 0 20px;
+    background-color: #f7f7f5;
+    font-size: 14px;
+    color: gray;
+    display: flex;
+}
+
+.giftBox {
+    width: 70px;
+    height: 84px;
+    margin-right: 10px;
+}
+
+.normal-item {
+    display: flex;
+}
+
+.normal-item img {
+    width: 30px;
+}
+
+.normal-item-left {
+    display: flex;
+    line-height: 34px;
+    width: 342px;
+}
+
+.normal-item-right {
+    width: 90px;
+    text-align: center;
+}
+
+/* 定制贺卡 */
+.fiveBox {
+    display: flex;
+}
+
+.cardBox {
+    display: flex;
+    flex-grow: 1;
+}
+
+.cardBox img {
+    width: 35px;
+}
+
+.cardBox span {
+    margin-left: 15px;
+    padding-top: 5px;
+}
+
+.addBox {
+    display: flex;
+    padding-top: 5px;
+}
+
+.addBox img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.addBox a {
+    color: black;
+    font-size: 14px;
+}
+
+.cardBox2 span:nth-child(1) {
+    font-size: 20px;
+}
+
+.cardBox2 span:nth-child(2) {
+    font-size: 14px;
+    color: gray;
+    margin-top: 6px;
+}
+
+.background {
+    position: fixed;
+    width: 1900px;
+    height: 1000px;
+    background-color: black;
+    opacity: 0.5;
+    display: none;
+}
+
+/* 贺卡部分 */
+#congratulate {
+    position: relative;
+    left: 20px;
+    top: 4px;
+}
+
+#addGreet {
+    cursor: pointer;
+}
+
+.greetCard {
+    width: 483px;
+    height: 600px;
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    padding: 30px 0;
+    box-shadow: 0 0 10px gray;
+    display: none;
+}
+
+.greetCard p {
+    text-align: right;
+    margin: 0 30px 0 0;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.greetCard h2 {
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.greetCard div:nth-child(3) {
+    text-align: center;
+    width: 400px;
+    height: 200px;
+    line-height: 200px;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #fcfcfc;
+    box-shadow: 0 0 10px rgb(198, 198, 198);
+    margin-bottom: 20px;
+}
+
+.greetCard div input {
+    width: 360px;
+    height: 30px;
+    border: 0;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+
+.greetCard div a {
+    position: absolute;
+    right: 70px;
+    color: rgb(194, 194, 194);
+    cursor: pointer;
+}
+
+.greetCard div img {
+    width: 400px;
+}
+
+.greetCard div:nth-child(4) {
+    width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.addCard {
+    width: 180px;
+    height: 50px;
+    color: white;
+    line-height: 50px;
+    border-radius: 50px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: red;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* 优惠券部分 */
+.couponsBox {
+    padding: 35px 5px;
+    width: 494px;
+    height: 209px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 0 10px gray;
+    display: none;
+}
+
+.couponsBox p:nth-child(1) {
+    text-align: right;
+    padding-right: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.couponsBox p {
+    font-size: 14px;
+    margin: 0px 0 20px 0;
+    color: gray;
+}
+
+.couponsBox input {
+    width: 358px;
+    height: 42px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.couponsBox div {
+    width: 170px;
+    height: 46px;
+    background-color: #ccc;
+    margin: 0 auto;
+    line-height: 46px;
+    color: white;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#coupons {
+    cursor: pointer;
+}
+
+
+/* 结账部分 */
+.sixBox {
+    padding: 35px;
+    width: 1130px;
+}
+
+
+.sixBox-top {
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: end;
+    font-size: 14px;
+    color: rgb(102, 102, 102);
+    margin-bottom: 15px;
+}
+
+.row .name {
+    margin-right: 20px;
+}
+
+.row .price {
+    width: 63px;
+    text-align: right;
+}
+
+.row:nth-child(3) .price {
+    color: red;
+}
+
+
+
+.sixBox-bottom {
+    text-align: right;
+    padding-top: 25px;
+}
+
+.sixBox-bottom>div {
+    margin-bottom: 15px;
+}
+
+.total span:nth-child(1) {
+    font-size: 18px;
+    color: #666;
+}
+
+.total span:nth-child(2) {
+    font-size: 35px;
+    color: red;
+}
+
+.addressPerson {
+    font-size: 14px;
+    color: #666;
+}
+
+.submitBox {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.submit {
+    background-color: #f51200;
+    color: white;
+    width: 108px;
+    height: 46px;
+    padding: 0 31px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 46px;
+    display: inline-block;
+}

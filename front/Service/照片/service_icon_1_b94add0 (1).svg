@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>专业维修</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="44" height="44"></rect>
+    </defs>
+    <g id="pc" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="PC服务1920" transform="translate(-1046.000000, -1480.000000)">
+            <g id="专业维修" transform="translate(1046.000000, 1480.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="矩形备份-24"></g>
+                <path d="M25.9996952,12.31 L31.3923048,15.4226497 C32.011107,15.7799153 32.3923048,16.4401694 32.3923048,17.1547005 L32.3923048,26.8452995 C32.3923048,27.5598306 32.011107,28.2200847 31.3923048,28.5773503 L25.9996952,31.69 L26,39 C26,40.1045695 25.1045695,41 24,41 L20,41 C18.8954305,41 18,40.1045695 18,39 L17.9996952,31.691 L12.6076952,28.5773503 C11.988893,28.2200847 11.6076952,27.5598306 11.6076952,26.8452995 L11.6076952,17.1547005 C11.6076952,16.4401694 11.988893,15.7799153 12.6076952,15.4226497 L17.9996952,12.31 L18,22.8924315 L22,25.2986702 L26,22.8924315 L25.9996952,12.31 Z" id="形状结合" stroke="#575C66" stroke-width="2" stroke-linejoin="round" mask="url(#mask-2)" transform="translate(22.000000, 26.655000) rotate(-45.000000) translate(-22.000000, -26.655000) "></path>
+                <rect id="矩形备份-24" mask="url(#mask-2)" x="0" y="0" width="44" height="44"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,213 @@
+body {
+    margin: 0;
+
+    font-size: 12px;
+
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'HYQiHei-EZS', 'microsoft yahei', 'Helvetica Neue', Helvetica, Tahoma, sans-serif;
+    background-color: rgb(247, 247, 247);
+}
+
+input:focus {
+    outline: none;
+}
+
+select {
+    outline: none;
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+
+}
+
+.header .register {
+    width: 100%;
+    height: 100%;
+}
+
+.header .register .header-zhuce {
+    width: 860px;
+    height: 670px;
+    background: #fff;
+    margin: 0 auto;
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.header .register .header-zhuce .logo-area {
+    width: 160px;
+    height: 42px;
+    margin: 0 auto;
+    margin-top: 60px;
+    cursor: pointer
+}
+
+.header .register .header-zhuce .logo-area img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.header .register .header-zhuce .title-item {
+    width: 860px;
+    height: 29.333px;
+    margin-top: 30px;
+}
+
+.header .register .header-zhuce .title-item p {
+    font-family: 'HYQiHei-FZS';
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+
+}
+
+.header .register .header-zhuce .inner-box {
+    width: 360px;
+    height: 248px;
+    width: 360px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    position: relative;
+
+}
+
+.header .register .header-zhuce .inner-box .password {
+    width: 358px;
+    height: 48px;
+    border: 1px solid #dedfe0;
+    font-size: 16px;
+
+    line-height: 48px;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.header .register .header-zhuce .inner-box .password #userpass {
+
+    width: 358px;
+    height: 44px;
+    padding: 0;
+    border: none;
+
+
+}
+
+
+.header .register .header-zhuce .inner-box .hint {
+    width: 360px;
+    height: 19px;
+    position: relative;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+    line-height: 19px;
+}
+
+.header .register .header-zhuce .inner-box .phone {
+    width: 356px;
+    height: 48px;
+    margin-top: 15px;
+    border: 1px solid #dedfe0;
+    font-size: 16px;
+    color: #000;
+    line-height: 48px;
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+.header .register .header-zhuce .inner-box .phone #number {
+    width: 94px;
+    height: 28px;
+    border: none;
+    background-color: #fff;
+}
+
+.header .register .header-zhuce .inner-box .phone #userphone {
+    font-size: 16px;
+    color: #b7b3b3;
+    height: 46px;
+    line-height: 46px;
+    width: 257px;
+    padding: 0;
+    border: none;
+}
+
+.header .register .header-zhuce .inner-box .protocol {
+    width: 360px;
+    margin-top: 20px;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 8px;
+    color: #252525;
+}
+
+.header .register .header-zhuce .inner-box .protocol a {
+    color: #456fff;
+    text-decoration: none;
+}
+
+.header .register .header-zhuce .inner-box .next input {
+    display: block;
+    width: 360px;
+    height: 48px;
+    line-height: 48px;
+    font-size: 17px;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #456fff;
+    border: none;
+}
+
+.header .foot {
+    width: 100%;
+    height: 49.333px;
+    margin-top: 135px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 11px;
+    color: #9d9d9d;
+}
+
+.header .foot .service {
+
+    height: 16px;
+
+}
+
+.header .foot .service a {
+    text-decoration: none;
+    margin-right: 30px;
+    color: #666;
+}
+
+.header .foot .service a:hover {
+    color: #456fff;
+}
+
+.header .foot .service span {
+    color: #666;
+    width: 47.25px;
+}
+
+.header .foot .service img {
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+.header .foot .copyright {
+    padding: 10px 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}

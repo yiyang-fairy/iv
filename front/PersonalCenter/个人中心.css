@@ -1,0 +1,333 @@
+body {
+    margin: 0;
+    width: 100%;
+    font-size: 12px;
+    height: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    font-family: 'HYQiHei-EZS', 'microsoft yahei', 'Helvetica Neue', Helvetica, Tahoma, sans-serif;
+    background-color: rgb(247, 247, 247);
+}
+
+.header {
+    width: 100%;
+    height: 100%;
+
+}
+
+.header .register {
+    width: 100%;
+    height: 100%;
+}
+
+.header .register .header-center {
+    width: 860px;
+    height: 1038px;
+    background: #fff;
+    margin: auto;
+    margin-top: 60px;
+    overflow: hidden;
+    margin-bottom: -105px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+.header .register .header-center .logo-area {
+    width: 160px;
+    height: 42px;
+    margin: 0 auto;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+.header .register .header-center .logo-area img {
+    width: 100%;
+    height: 100%;
+    display: block;
+
+}
+
+.header .register .header-center .title-item {
+    width: 860px;
+    height: 29.333px;
+    margin-top: 30px;
+}
+
+.header .register .header-center .title-item p {
+    font-family: 'HYQiHei-FZS';
+    font-size: 22px;
+    color: #000;
+    text-align: center;
+
+}
+
+.header .register .header-center .info {
+    width: 730px;
+    margin: 0 auto;
+    line-height: 30px;
+    margin-top: 24px;
+    overflow: hidden;
+}
+
+.header .register .header-center .info .logout {
+    float: right;
+    font-size: 13px;
+    color: #252525;
+    cursor: pointer;
+}
+
+.header .register .header-center .info .logout:hover {
+    color: #456fff;
+}
+
+.header .register .header-center .info .name {
+    float: right;
+    margin-right: 40px;
+    font-size: 13px;
+    color: #666;
+    max-width: 520px;
+    line-height: 20px;
+    text-align: left;
+    word-break: break-all;
+    margin-top: 5px;
+}
+
+.header .register .header-center .info .avatar {
+    float: right;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+}
+
+.header .register .header-center .info .avatar img {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.header .register .header-center .info .gap {
+    width: 740px;
+    height: 1px;
+    margin: 0 auto;
+    margin-top: 37px;
+    background-color: #f2f2f2;
+}
+
+.header .register .header-center .data {
+    width: 860px;
+    height: 852.667px;
+
+}
+
+.header .register .header-center .data .small-title {
+    font-family: 'HYQiHei-FZS';
+    font-size: 13px;
+    color: #252525;
+    margin-top: 18px;
+    padding-left: 65px;
+    text-align: left;
+}
+
+.header .register .header-center .data .section {
+    width: 730px;
+    height: 70.667px;
+    padding: 30px 65px 0;
+
+}
+
+.header .register .header-center .data .section .part {
+    position: relative;
+    width: 665px;
+    height: 49px;
+    display: block;
+    padding-left: 65px;
+
+}
+
+.header .register .header-center .data .section .part .icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+}
+
+.header .register .header-center .data .section .part .icon img {
+    width: 34px;
+    height: 34px;
+}
+
+.header .register .header-center .data .section .part .name-detail {
+    height: 100%;
+    width: 500px;
+    font-size: 17px;
+    color: #252525;
+    text-align: left;
+}
+
+.header .register .header-center .data .section .part .name-detail .phone span {
+    line-height: 30px;
+    margin: 3px;
+}
+
+.header .register .header-center .data .section .part .name-detail .phone span img {
+    margin: 10px auto;
+    width: 16px;
+    height: 16px;
+}
+
+.header .register .header-center .data .section .part .name-detail .num {
+    margin-top: 9px;
+    font-size: 13px;
+    color: #999;
+}
+
+.header .register .header-center .data .section .part .operate {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 30px;
+}
+
+.header .register .header-center .data .section .part .operate span {
+    padding-left: 19px;
+    padding-right: 19px;
+    height: 30px;
+    line-height: 28px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-size: 14px;
+    color: #818181;
+    cursor: pointer;
+}
+
+.header .register .header-center .data .section .left-line {
+    float: right;
+    width: 670px;
+    margin-right: -5px;
+    margin-top: 21px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.header .register .header-center .data .auth-bind {
+    padding: 0 65px;
+    width: 730px;
+    height: 109px;
+}
+
+.header .register .header-center .data .auth-bind .small-title {
+    margin-top: 30px;
+    padding-left: 0;
+}
+
+.header .register .header-center .data .auth-bind .auth-part {
+    margin-top: 25px;
+    overflow: hidden;
+    margin-right: -105px;
+}
+
+.header .register .header-center .data .auth-bind .auth-part .part {
+    position: relative;
+    float: left;
+    width: 243px;
+    margin-right: 35px;
+    margin-bottom: 30px;
+}
+
+.header .register .header-center .data .auth-bind .auth-part .part .icon {
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 17px;
+}
+
+.header .register .header-center .data .auth-bind .auth-part .part .icon img {
+    width: 30px;
+    height: 30px;
+}
+
+.header .register .header-center .data .auth-bind .auth-part .part .content-box {
+    float: left;
+    padding-left: 47px;
+    text-align: left;
+    width: 139px;
+    font-family: 'HYQiHei-EZS';
+    font-size: 13px;
+    color: #000;
+}
+
+.header .register .header-center .data .auth-bind .auth-part .part .content-box .botton img {
+    display: inline-block;
+    margin-top: -2px;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.header .register .header-center .data .auth-bind .auth-part .part .content-box .botton {
+    color: #456fff;
+    cursor: pointer;
+}
+
+.header .register .header-center .data .protocol2 {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.header .register .header-center .data .protocol2 span a {
+    color: #456fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.header .register .foot {
+    width: 100%;
+    height: 100%;
+    margin-top: 135px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 11px;
+    color: #9d9d9d;
+}
+
+.header .register .foot .service {
+
+    height: 16px;
+
+}
+
+.header .register .foot .service a {
+    text-decoration: none;
+    margin-right: 30px;
+    color: #666;
+}
+
+.header .register .foot .service a:hover {
+    color: #456fff;
+}
+
+.header .register .foot .service span {
+    color: #666;
+    width: 47.25px;
+}
+
+.header .register .foot .service img {
+    margin-right: 10px;
+    vertical-align: text-bottom;
+}
+
+.header .register .foot .copyright {
+    padding: 10px 0;
+    font-size: 10px;
+    box-sizing: border-box;
+}

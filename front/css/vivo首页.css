@@ -1,0 +1,599 @@
+body {
+    margin: 0;
+    height: 0;
+    background-color: #f7f7f7;
+}
+
+/* 第一行样式  */
+#zong {
+    width: 100%;
+    margin: auto;
+}
+
+#jp-zong {
+    width: 100%;
+    margin: auto;
+}
+
+#igs {
+    margin: 10px auto;
+    /*  */
+    width: 1260px;
+    height: 522px;
+    position: absolute;
+    z-index: -1;
+}
+
+.ig {
+    position: absolute;
+}
+
+.ig img {
+    width: 1260px;
+    height: 522px;
+    position: relative;
+    /* left: -700px; */
+}
+
+#tabs {
+    position: absolute;
+    list-style: none;
+    background-color: rgba(255, 255, 255, .5);
+    left: 700px;
+    bottom: 60px;
+    border-radius: 10px;
+    padding: 5px 0 5px 5px;
+}
+
+.tab {
+    float: left;
+    text-align: center;
+    line-height: 20px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    overflow: hidden;
+    margin-right: 4px;
+    border-radius: 100%;
+    background-color: rgb(241, 238, 240);
+}
+
+.btn {
+    position: absolute;
+    color: #fff;
+    top: 110px;
+    width: 40px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, .3);
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.btn2 {
+    position: absolute;
+    right: 0px;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+#box1 {
+    width: 1226px;
+    ;
+    height: 522px;
+    margin: auto;
+
+}
+
+#box1-1 {
+    width: 200px;
+    height: 482px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 25px;
+    position: relative;
+    background-color: #f7f8fa;
+}
+
+#box1-1>ul {
+    list-style: none;
+    font-size: 14px;
+    padding-left: 0;
+    background-color: #f7f8fa;
+}
+
+#box1-1>ul>li {
+    line-height: 55px;
+    height: 55px;
+}
+
+#box1-1>ul>li:hover {
+    background-color: white;
+}
+
+#box1-1 ul li .menu-l {
+    margin-left: 25px;
+    float: left;
+}
+
+#box1-1 ul li .menu-r {
+    margin-right: 30px;
+    float: right;
+}
+
+#box1-1 .yincangcaidan {
+    display: inline-block;
+    width: 656px;
+    height: 482px;
+    display: none;
+    position: absolute;
+    left: 210px;
+    top: 0;
+    background-color: #f7f8fa;
+    padding-right: 40px;
+
+}
+
+#box1-1>ul>li:hover .yincangcaidan {
+    display: block;
+}
+
+#box1-1 .yincangcaidan1 .category-all {
+    text-decoration: none;
+    float: right;
+    color: #999;
+    font-size: 12px;
+    line-height: 58px;
+    margin-top: 15px;
+    /* margin-left: 10px; */
+}
+
+#box1-1 .yincangcaidan1 p {
+    display: inline-block;
+    color: #252525;
+    font-size: 16px;
+    line-height: 58px;
+    padding-left: 20px;
+    float: left;
+
+}
+
+.yincangcaidan2 {
+    width: 619px;
+    height: 120px;
+    margin-top: 50px;
+    overflow: hidden;
+}
+
+.yincangcaidan2 li {
+    display: inline-block;
+    width: 190px;
+    height: 50px;
+
+    float: left;
+    margin-top: 8px;
+}
+
+.yincangcaidan2 li a {
+    text-decoration: none;
+    display: block;
+    position: relative;
+    z-index: 0;
+    padding: 0 8px;
+    color: #555;
+    font-size: 14px;
+    line-height: 50px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-radius: 6px;
+    background: 50%;
+    background-size: cover;
+    overflow: hidden;
+    margin-right: 10px;
+
+    background-color: #999;
+}
+
+.yincangcaidan2 li a:hover:before {
+
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .06);
+}
+
+.yincangcaidan-product {
+    list-style: none;
+    width: 690px;
+    height: 289px;
+    margin-bottom: -40px;
+    padding-top: 39px;
+    font-size: 1px;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.yincangcaidan-product>li {
+
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 20px;
+    width: 222px;
+    font-size: 0;
+}
+
+.yincangcaidan-product>li>a>img {
+    width: 46px;
+    height: 46px;
+}
+
+.yincangcaidan-product span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 8px;
+    max-width: 138px;
+    color: #252525;
+    font-size: 14px;
+    white-space: nowrap;
+
+
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+
+/* <!-- 第二行样式 --> */
+
+#box2 .box2-ul {
+    width: 1200px;
+    height: 200px;
+
+    margin: auto;
+    margin-top: 20px;
+    padding: 0;
+    overflow: hidden;
+}
+
+#box2 .box2-ul li {
+    width: 394px;
+    height: 190px;
+    display: inline-block;
+    float: left;
+    background-color: bisque;
+    margin-top: 5px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+#box2 .box2-ul li img {
+    width: 394px;
+    height: 190px;
+
+
+}
+
+#box2 .box2-ul li img:hover {
+    box-shadow: rgb(226 226 226) 0px 0px 20px 1px;
+}
+
+
+
+/* <!-- 秒杀行头样式 --> */
+
+#miaosha-title {
+    width: 1200px;
+    height: 32px;
+    margin: auto;
+}
+
+#miaosha-title .rush-logo {
+    height: 26px;
+}
+
+#miaosha-title .count-down {
+    margin-left: 10px;
+    font-size: 16px;
+
+    color: #999;
+    display: inline-block;
+}
+
+#miaosha-title .bolder {
+    display: inline-block;
+    border-radius: 3px;
+    width: 38px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    background-color: #ec0404;
+    font-size: 18px;
+    color: #fff;
+    margin: 0 6px;
+}
+
+
+
+/* <!-- 秒杀行样式 --> */
+
+#miaosha {
+    width: 100%;
+    height: 460px;
+    /* background-color: blue; */
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+#miaosha .miaosha-1 {
+    width: 1200px;
+    height: 447px;
+    margin: auto;
+    /* background-color: chocolate; */
+    position: relative;
+    /* overflow: hidden; */
+}
+
+#miaosha .button-1 {
+    position: relative;
+    top: 240px;
+    left: 80px;
+}
+
+#miaosha .btn {
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-color: #f7f7f7;
+    line-height: 25px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #a4a4a4;
+    cursor: pointer;
+    font-size: 18px;
+    color: #555;
+}
+
+#miaosha .button-2 {
+    position: relative;
+    float: right;
+    margin-right: 100px;
+    top: -230px;
+}
+
+#miaosha .miaosha-1-list {
+    width: 1198px;
+    height: 388px;
+    display: inline-block;
+    /* background-color: #ff6700; */
+    overflow: hidden;
+}
+
+#miaosha .miaosha-1-ul {
+    list-style: none;
+    display: inline-block;
+    /* background-color: blueviolet; */
+    padding-left: 0;
+    overflow: hidden;
+}
+
+#miaosha .miaosha-1-li {
+    width: 293px;
+    height: 380px;
+    display: inline-block;
+    background-color: #999;
+    overflow: hidden;
+}
+
+#miaosha .miaosha-1-li a>img {
+    width: 172px;
+    height: 172px;
+    margin-top: 43px;
+}
+
+#miaosha .miaosha-1-li {
+
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    /* 溢出，位置调整 */
+    overflow: hidden;
+
+
+
+}
+
+#miaosha .miaosha-1-li .price {
+    color: #f51919;
+    font-size: 16px;
+    line-height: 1;
+}
+
+#miaosha .miaosha-1-li:hover {
+    box-shadow: rgb(226 226 226) 0px 0px 20px 1px;
+}
+
+#miaosha .miaosha-1-li .time {
+    font-size: 30px;
+    line-height: 59px;
+    margin-top: 80px;
+}
+
+#miaosha .miaosha-1-li>h4 {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 37px;
+}
+
+#miaosha .miaosha-1-li .btn {
+    margin-top: 100px;
+    width: 144px;
+    height: 48px;
+    line-height: 48px;
+    text-align: center;
+    border-radius: 100px;
+    background-color: #f81200;
+    color: #fff;
+    font-size: 19px;
+
+    margin-left: -70px;
+}
+
+#miaosha .miaosha-1-li a {
+    text-decoration: none;
+}
+
+
+
+
+/* <!-- 精品手机行头样式 --> */
+
+#info {
+    width: 1226px;
+    margin: auto;
+    position: relative;
+}
+
+#info .subject {
+    padding: 38px 0 25px;
+    color: #333;
+    font-size: 24px;
+    line-height: 1;
+    text-align: center;
+    margin: 0;
+}
+
+#info .more-wrapper {
+    position: absolute;
+    right: 40px;
+    bottom: 15px;
+    list-style: none;
+}
+
+#info .more-wrapper a,
+#info .more-wrapper li {
+    float: left;
+}
+
+#info .more-wrapper a {
+    text-decoration: none;
+    margin-left: 22px;
+    color: #333;
+    font-size: 14px;
+    line-height: 1;
+}
+
+#info .more-wrapper a:hover {
+    color: #ff6700;
+}
+
+
+/* <!-- 精品手机行样式 --> */
+
+/* 精品手机行大盒子 */
+#shouji-list {
+    width: 1200px;
+    height: 780px;
+    padding-top: 0;
+    margin-top: 0;
+    margin: auto;
+}
+
+/* 第一张图盒子 */
+#shouji-list .shouji-li-1 {
+
+    width: 585px;
+    height: 350px;
+
+    display: inline-block;
+    position: relative;
+    margin-bottom: 10px;
+
+    text-align: center;
+    background-color: #fff;
+
+
+}
+
+/* 阴影效果 */
+#shouji-list .shouji-li-1:hover {
+    box-shadow: rgb(226 226 226) 0px 0px 20px 1px;
+}
+
+/* 第一张图 */
+#shouji-list .shouji-li-1>a>img {
+    width: 585px;
+    height: 350px;
+}
+
+/* 其他图 */
+#shouji-list .shouji-li a>img {
+    width: 172px;
+    height: 172px;
+    margin-top: 43px;
+}
+
+#shouji-list .shouji-li {
+    width: 290px;
+    height: 350px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    background-color: #fff;
+    /* 溢出，位置调整 */
+    overflow: hidden;
+
+
+
+}
+
+/* 阴影效果 */
+#shouji-list .shouji-li:hover {
+    box-shadow: rgb(226 226 226) 0px 0px 20px 1px;
+}
+
+
+/* 手机名字样式 */
+#shouji-list .name {
+    margin-bottom: 0px;
+    padding-top: 6px;
+    color: #333;
+    font-size: 16px;
+    line-height: 30px;
+    overflow: hidden;
+}
+
+/* 手机介绍文字样式 */
+#shouji-list .feature {
+    margin: 0px;
+    height: 24px;
+    color: #333;
+    font-size: 12px;
+    line-height: 24px;
+}
+
+/* 手机价格样式 */
+#shouji-list .price {
+    color: #f51919;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* ¥字式样 */
+.rmb-symbol::before {
+    content: "¥";
+    margin-right: 2px;
+    color: rgb(245, 25, 25);
+    font-size: 14px;
+    font-family: "Avenir Roman", "Microsoft YaHei", 微软雅黑;
+}

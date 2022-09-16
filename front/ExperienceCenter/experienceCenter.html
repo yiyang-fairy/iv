@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./vivo体验店.css">
+    <script src="./jquery-1.8.3.min.js"></script>
+    <link rel="stylesheet" href="../head/head.css">
+    <script type="text/javascript" src="../head/header.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $(".abc").css("marginLeft", "-2140px")
+            $(".right").click(function () {
+
+                let Ori = $('.abc').css('marginLeft')
+                let ori = Number(Ori.substr(0, Ori.length - 2))
+                if (ori > -4000) {
+                    $(".abc").css("marginLeft", ori - 580 + "px")
+                    console.log($('.abc').css('marginLeft'), 'ori', ori);
+                } else {
+                    $(".abc").css("marginLeft", "-4200px")
+                }
+            })
+
+
+            // let right = ori + 580
+            $(".left").click(function () {
+
+                let Ori = $('.abc').css('marginLeft')
+                let ori = Number(Ori.substr(0, Ori.length - 2))
+                if (ori < -20) {
+                    $(".abc").css("marginLeft", ori + 580 + "px")
+                    console.log($('.abc').css('marginLeft'), 'ori', ori);
+                } else {
+                    $(".abc").css("marginLeft", -20 + "px")
+                }
+
+            })
+        })
+
+        $(function () {
+            $(".wrapper .wrapper-banner .search-box>span").click(function () {
+                $(this).next().stop().fadeToggle(500);
+            });
+        });
+    </script>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrapper-banner">
+            <div class="banner-box">
+                <img src="./照片/vivo-stores-high-bg_cc794fb.jpg">
+            </div>
+            <div class="search-container">
+                <p class="title">查找体验店</p>
+                <p class="suggestion-tip">具体服务项目以体验店提供为准，建议您电话咨询后前往</p>
+            </div>
+
+            <div class="search-box">
+                <input class="search-input" id="search_home_input" type="text" placeholder="请输入您的问题"><span
+                    class="iconfont">&#xe60f;</span>
+                <ul>
+                    <li>
+                        jhjgghjg
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="map-banner">
+            <div class="map-search-box">
+                <div class="map">
+                    <iframe width="800" height="524" frameborder="0"
+                        src="https://cn.bing.com/maps/embed?h=524&w=800&cp=pnwf1ktqrz4j&lvl=10&typ=d&sty=r&src=SHELL&FORM=MBEDV8"
+                        scrolling="no">
+                    </iframe>
+                </div>
+                <div>
+                    <input class="map-search-input" id="map_search_input" type="text" placeholder="请输入要检索的体验店信息"><span
+                        class="iconfont">&#xe651;</span>
+                </div>
+            </div>
+            <div class="store-service">
+                <p class="store-service-head">—————体验店服务—————</p>
+                <ul class="store-service-list">
+                    <li>
+                        <p class="iconfont">&#xe722;</p>
+                        <p class="store-service-desc">官方直销</p>
+                    </li>
+                    <li>
+                        <p class="iconfont">&#xe8b9;</p>
+                        <p class="store-service-desc">新机体验</p>
+                    </li>
+                    <li>
+                        <p class="iconfont">&#xe652;</p>
+                        <p class="store-service-desc">会员积分</p>
+                    </li>
+                    <li>
+                        <p class="iconfont">&#xe633;</p>
+                        <p class="store-service-desc">免费茶歇</p>
+                    </li>
+                </ul>
+                <div class="vvv">
+                    <p>附近暂无体验店，以下为推荐结果</p>
+                    <ul class="store-list">
+                        <li>
+                            <p class="store-name">vivo官方授权体验店(东城磁...</p>
+                            <p class="store-address">北京市东城区珠市口东大街2号北京大都市低商1-15</p>
+                            <span class="iconfont">&#xe634;010-57289800</span>
+                        </li>
+                        <li>
+                            <p class="store-name">vivo官方授权体验店(东城磁...</p>
+                            <p class="store-address">北京市东城区珠市口东大街2号北京大都市低商1-15</p>
+                            <span class="iconfont">&#xe634;010-57289800</span>
+                        </li>
+                        <li>
+                            <p class="store-name">vivo官方授权体验店(东城磁...</p>
+                            <p class="store-address">北京市东城区珠市口东大街2号北京大都市低商1-15</p>
+                            <span class="iconfont">&#xe634;010-57289800</span>
+                        </li>
+                        <li>
+                            <p class="store-name">vivo官方授权体验店(东城磁...</p>
+                            <p class="store-address">北京市东城区珠市口东大街2号北京大都市低商1-15</p>
+                            <span class="iconfont">&#xe634;010-57289800</span>
+                        </li>
+                        <li>
+                            <p class="store-name">vivo官方授权体验店(东城磁...</p>
+                            <p class="store-address">北京市东城区珠市口东大街2号北京大都市低商1-15</p>
+                            <span class="iconfont">&#xe634;010-57289800</span>
+                        </li>
+                        <li>
+                            <p class="store-name">vivo官方授权体验店(东城磁...</p>
+                            <p class="store-address">北京市东城区珠市口东大街2号北京大都市低商1-15</p>
+                            <span class="iconfont">&#xe634;010-57289800</span>
+                        </li>
+                        <li>
+                            <p class="store-name">vivo官方授权体验店(东城磁...</p>
+                            <p class="store-address">北京市东城区珠市口东大街2号北京大都市低商1-15</p>
+                            <span class="iconfont">&#xe634;010-57289800</span>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="stores-center">
+            <h2>体验店服务</h2>
+            <div class="swiper-container">
+                <div class="border">
+                    <ul class="abc">
+                        <li>
+                            <h3>手机保养</h3>
+                            <p class="p_text">用久的手机难免会有些污迹，不用担心，我们配备了专业的工具，为你的手机提供全面的清洁保养服务。</p>
+                            <div>
+                                <img class="service-img" src="./照片/手机保养.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>高速WiFi</h3>
+                            <p class="p_text">安全，高速无线WiFi，尽情享用。</p>
+                            <div>
+                                <img class="service-img" src="./照片/高速wiif.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>应急充电</h3>
+                            <p class="p_text">为你提供快速充电服务。</p>
+                            <div>
+                                <img class="service-img" src="./照片/应急充电.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>免费茶歇</h3>
+                            <p class="p_text">在这里选择小憩一下，也是个不错的选择。</p>
+                            <div>
+                                <img class="service-img" src="./照片/免费茶歇.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>免费贴膜</h3>
+                            <p class="p_text">购买手机并成为会员后，你可以在指定体验中心和专卖店享受相应的免费贴膜服务。请登录【vivo官网app】-【会员】页面，查看如何使用贴膜特权。</p>
+                            <div>
+                                <img class="service-img" src="./照片/免费贴膜.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>小V课堂</h3>
+                            <p class="p_text">我们这里不仅是提供产品的地方，更是你了解手机设备、学习知识的好地方。我们会在这里向不同经验水平的顾客提供课堂讲座，欢迎你的加入。</p>
+                            <div>
+                                <img class="service-img" src="./照片/小v课堂.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>照片打印</h3>
+                            <p class="p_text">你是不是想打印出手机中漂亮的照片？我们为你提供了照片打印服务，记录生活中的点滴美好。</p>
+                            <div>
+                                <img class="service-img" src="./照片/照片打印.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>代送维修</h3>
+                            <p class="p_text">这里虽然不能进行维修工作，但我们提供免费送修服务：将故障手机送到维修中心，修好后第一时间通知你前来取机。</p>
+                            <div>
+                                <img class="service-img" src="./照片/代送维修.jpg">
+                            </div>
+                        </li>
+                        <li>
+                            <h3>免费刷机</h3>
+                            <p class="p_text">你可以到vivo官方授权的体验中心或体验店，我们提供了免费刷机服务，给你一个流畅的手机系统。</p>
+                            <div>
+                                <img class="service-img" src="./照片/免费刷机.jpg">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <p>
+                    <span class="left">
+                        <</span> <span class="right">>
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div class="stores-bottom">
+            <div class="stores-content">
+                <h2>体验店活动</h2>
+            </div>
+            <ul class="stores-activity">
+                <li>
+                    <div class="activity-img">
+                        <img src="./照片/vivo-stores-activity-f1-x2_85c15a0.jpg">
+                    </div>
+                    <div class="activity-info">
+                        <h3>新品首发</h3>
+                        <p class="p_text">和我们一起见证vivo每一款新品的发布，并在第一时间获得vivo新品上手体验。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="activity-img">
+                        <img src="./照片/vivo-stores-activity-f2-x2_32c2234.jpg">
+                    </div>
+                    <div class="activity-info">
+                        <h3>V粉生日会</h3>
+                        <p class="p_text">和我们一起见证vivo每一款新品的发布，并在第一时间获得vivo新品上手体验。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="activity-img">
+                        <img src="./照片/全民服务日.jpg">
+                    </div>
+                    <div class="activity-info">
+                        <h3>全民服务日</h3>
+                        <p class="p_text">和我们一起见证vivo每一款新品的发布，并在第一时间获得vivo新品上手体验。</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="activity-img">
+                        <img src="./照片/个性化活动.jpg">
+                    </div>
+                    <div class="activity-info">
+                        <h3>个性化活动</h3>
+                        <p class="p_text">和我们一起见证vivo每一款新品的发布，并在第一时间获得vivo新品上手体验。</p>
+                    </div>
+                </li>
+            </ul>
+            <object type="text/x-scriptlet" data="../Footer/footer.html" width=100% height=800px></object>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

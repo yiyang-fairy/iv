@@ -1,0 +1,95 @@
+#zititubaio {
+    width: 50px;
+    height: 150px;
+    border: 1px solid #f5f5f5;
+    position: fixed;
+    bottom: 50px;
+    right: 0;
+
+}
+
+#zititubaio>div>.xuanfu1 {
+
+
+    width: 133px;
+    color: #4c4c4c;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+
+
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+
+    box-shadow: 0 0 50px 1px hsl(0deg 0% 39% / 10%);
+    position: fixed;
+    right: 60px;
+    bottom: 150px;
+
+}
+
+#zititubaio>div>.xuanfu2 {
+    width: 133px;
+    color: #4c4c4c;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+
+
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+
+    box-shadow: 0 0 50px 1px hsl(0deg 0% 39% / 10%);
+    position: fixed;
+    right: 60px;
+    bottom: 100px;
+
+}
+
+#zititubaio>div>.xuanfu3 {
+    width: 133px;
+    color: #4c4c4c;
+    font-size: 16px;
+    line-height: 48px;
+    text-align: center;
+
+
+    border: 1px solid #ebebeb;
+    background-color: #fff;
+
+    box-shadow: 0 0 50px 1px hsl(0deg 0% 39% / 10%);
+    position: fixed;
+    right: 60px;
+    bottom: 50px;
+
+}
+
+#zititubaio a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+}
+
+#zititubaio a>div {
+    width: 50px;
+    height: 50px;
+    border: 0.1px solid #f5f5f5;
+    font-size: 30px;
+
+    line-height: 50px;
+    text-align: center;
+
+}
+
+#zititubaio a>div:hover {
+
+    background-color: rgb(215, 211, 211);
+}
+
+#zititubaio>div>.xuanfu {
+    display: none;
+}
+
+#zititubaio>div:hover .xuanfu {
+    display: block;
+}
